@@ -45,4 +45,5 @@ function switchPostChart() {
         }
     }
 }
-document.getElementById("mode-button").addEventListener("click", function () { setTimeout(switchPostChart, 100) })
+// 如果转换了主题，重新渲染图表
+window.addEventListener('load', switchPostChart)
