@@ -5,7 +5,7 @@
     --border-style: 1px solid rgb(169, 169, 169);
     --backdrop-filter: blur(5px) saturate(150%);
     /* 设置主题色 */
-    --theme-color: #00ff00;
+    --theme-color: rgb(11, 101, 236);
 }
 
 /* 首页文章卡片 */
@@ -318,6 +318,7 @@ div#archive {
     /* 这个是调置顶的优先级的，-1在文章页下面，背景上面，个人推荐这种 */
     z-index: 2;
 }
+
 /* 鼠标样式 */
 #cursor {
     position: fixed;
@@ -325,7 +326,7 @@ div#archive {
     height: 16px;
     /* 这里改变跟随的底色 */
     /* background: var(--theme-color); */
-    background: #fff;
+    background: blue;
     border-radius: 8px;
     opacity: 0.1;
     z-index: 10086;
@@ -333,21 +334,19 @@ div#archive {
     transition: 0.1s ease-in-out;
     transition-property: background, opacity, transform;
 }
-/* 控制鼠标颜色 */
-[data-theme="dark"] #cursor {
-    background: #fff;
-}
+
+
 #cursor.hidden {
     opacity: 0;
 }
 
 #cursor.hover {
     opacity: 0.5;
-    transform: scale(2.5);
-    -webkit-transform: scale(2.5);
-    -moz-transform: scale(2.5);
+    transform: scale(2);
+    -webkit-transform: scale(2);
+    -moz-transform: scale(2);
     -ms-transform: scale(2.5);
-    -o-transform: scale(2.5);
+    -o-transform: scale(2);
 }
 
 #cursor.active {
@@ -615,6 +614,7 @@ body::-webkit-scrollbar {
         background-color: transparent
     }
 }
+
 /* emoji.css */
 #owo-big {
     position: fixed;
@@ -628,12 +628,15 @@ body::-webkit-scrollbar {
     overflow: hidden;
     animation: owoIn 0.3s cubic-bezier(0.42, 0, 0.3, 1.11);
 }
+
 [data-theme=dark] #owo-big {
     background-color: #4a4a4a
 }
+
 #owo-big img {
     width: 100%;
 }
+
 /* 动画效果代码由 Heo：https://blog.zhheo.com/ 提供 */
 @keyframes owoIn {
     0% {
@@ -646,6 +649,7 @@ body::-webkit-scrollbar {
         opacity: 1;
     }
 }
+
 /* 设置评论区输入提示 */
 /* 设置文字内容 :nth-child(1)的作用是选择第几个 */
 .el-input.el-input--small.el-input-group.el-input-group--prepend:nth-child(1):before {
@@ -699,4 +703,77 @@ body::-webkit-scrollbar {
     border-top-color: #444;
     left: 50%;
     transform: translate(-50%, -48px);
+}
+
+/* 欢迎信息 */
+#welcome-info {
+    background: linear-gradient(45deg, #b9f4f3, #e3fbf9);
+    border-radius: 18px;
+    padding: 8px;
+}
+
+[data-theme="dark"] #welcome-info {
+    background: #212121;
+}
+
+/* 加载图片 */
+.loading-img {
+    background: url(https://q2.qlogo.cn/headimg_dl?dst_uin=2745602379&spec=5) no-repeat center center;
+    background-size: cover;
+}
+
+.card-info-avatar .author-status-box {
+    position: absolute;
+    bottom: 0;
+    left: calc(100% - 28px);
+    width: 28px;
+    height: 28px;
+    border: 1px solid #d0d7de;
+    border-radius: 2em;
+    background-color: #f8f8f8f8;
+    transition: 0.4s;
+    overflow: hidden;
+}
+
+[data-theme="dark"] .card-info-avatar .author-status-box {
+    background-color: #222222f2;
+    border: 1px solid #5c6060;
+}
+
+.card-info-avatar .author-status-box .author-status {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 28px;
+    padding: 0 5px;
+}
+
+.card-info-avatar .author-status-box:hover {
+    width: 105px;
+}
+
+.card-info-avatar .author-status-box:hover .author-status span {
+    width: 105px;
+    margin-left: 4px;
+}
+
+.card-info-avatar .author-status-box .author-status span {
+    width: 0;
+    font-size: 12px;
+    height: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    transition: 0.4s;
+}
+
+.card-widget .card-info-avatar {
+    display: inline-block;
+    position: relative;
+}
+
+/* 信息卡片彩带 */
+.author_top:hover {
+    background: url(/img/snow.gif);
+    background-size: cover;
 }
