@@ -52,6 +52,23 @@ div#archive {
     background: rgba(0, 0, 0, 0.7) !important;
 }
 
+.nav-fixed #nav {
+    transform: translateY(58px) !important;
+    -webkit-transform: translateY(58px) !important;
+    -moz-transform: translateY(58px) !important;
+    -ms-transform: translateY(58px) !important;
+    -o-transform: translateY(58px) !important;
+}
+
+#nav {
+    transition: none !important;
+    -webkit-transition: none !important;
+    -moz-transition: none !important;
+    -ms-transition: none !important;
+    -o-transition: none !important;
+}
+
+
 /* 夜间模式遮罩 */
 [data-theme="dark"] #recent-posts>.recent-post-item,
 [data-theme="dark"] #aside-content .card-widget,
@@ -126,7 +143,7 @@ div#archive {
 
 /* 鼠标悬浮状态 */
 [data-theme="dark"] .magnet_link_context:hover {
-    background: #3ecdf1;
+    background: #07cde7;
     color: #f2f2f2;
 }
 
@@ -815,8 +832,8 @@ body::-webkit-scrollbar {
 #fps {
     position: fixed;
     /* 指定位置 */
-    RIGHT: 10px;
-    bottom: 10px;
+    right: 15px;
+    bottom: 8px;
     z-index: 1919810;
 }
 

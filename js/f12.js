@@ -2,7 +2,7 @@ document.onkeydown = function (e) {
     // 弹出提示vue
     new Vue({
         data: function () {
-            this.$notify({
+            this.$message({
                 title: "被发现了😜",
                 message: "小伙子，扒源记住要遵循GPL协议！",
                 position: 'top-left',
