@@ -1,3 +1,4 @@
+@import "//at.alicdn.com/t/font_2264842_b004iy0kk2b.css";
 /* 页脚与头图透明 */
 :root {
     --trans-light: rgba(255, 255, 255, 0.88);
@@ -650,71 +651,8 @@ body::-webkit-scrollbar {
     }
 }
 
-/* 设置评论区输入提示 */
-/* 设置文字内容 :nth-child(1)的作用是选择第几个 */
-.el-input.el-input--small.el-input-group.el-input-group--prepend:nth-child(1):before {
-    content: '输入QQ号会自动获取昵称和头像🐧';
-}
 
-.el-input.el-input--small.el-input-group.el-input-group--prepend:nth-child(2):before {
-    content: '收到回复将会发送到您的邮箱📧';
-}
 
-.el-input.el-input--small.el-input-group.el-input-group--prepend:nth-child(3):before {
-    content: '可以通过昵称访问您的网站🔗';
-}
-
-/* 当用户点击输入框时显示 */
-.el-input.el-input--small.el-input-group.el-input-group--prepend:focus-within::before,
-.el-input.el-input--small.el-input-group.el-input-group--prepend:focus-within::after {
-    display: block;
-}
-
-/* 主内容区 */
-.el-input.el-input--small.el-input-group.el-input-group--prepend::before {
-    /* 先隐藏起来 */
-    display: none;
-    /* 绝对定位 */
-    position: absolute;
-    /* 向上移动60像素 */
-    top: -60px;
-    /* 文字强制不换行，防止left:50%导致的文字换行 */
-    white-space: nowrap;
-    /* 圆角 */
-    border-radius: 10px;
-    /* 距离左边50% */
-    left: 50%;
-    /* 然后再向左边挪动自身的一半，即可实现居中 */
-    transform: translate(-50%);
-    /* 填充 */
-    padding: 14px 18px;
-    background: #444;
-    color: #fff;
-}
-
-/* 小角标 */
-.el-input.el-input--small.el-input-group.el-input-group--prepend::after {
-    display: none;
-    content: '';
-    position: absolute;
-    /* 内容大小（宽高）为0且边框大小不为0的情况下，每一条边（4个边）都是一个三角形，组成一个正方形。
-    我们先将所有边框透明，再给其中的一条边添加颜色就可以实现小三角图标 */
-    border: 12px solid transparent;
-    border-top-color: #444;
-    left: 50%;
-    transform: translate(-50%, -48px);
-}
-
-/* 欢迎信息 */
-#welcome-info {
-    background: linear-gradient(45deg, #b9f4f3, #e3fbf9);
-    border-radius: 18px;
-    padding: 8px;
-}
-
-[data-theme="dark"] #welcome-info {
-    background: #212121;
-}
 
 /* 加载图片 */
 .loading-img {
@@ -824,35 +762,10 @@ div#rightside {
     display: none !important
 }
 
-#rightside>div>a,
-#rightside>div>button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 38px;
-    height: 38px;
-    font-size: 18px;
-    border-radius: 6px
-}
-
 div#rightside {
     display: var(--rightside-display);
     opacity: .98 !important;
     transform: translateX(-58px)
-}
-
-/* 波浪css */
-.main-hero-waves-area {
-    width: 100%;
-    position: absolute;
-    left: 0;
-    bottom: -11px;
-    z-index: 5;
-}
-
-.waves-area .waves-svg {
-    width: 100%;
-    height: 5rem;
 }
 
 /* Animation */
@@ -1141,4 +1054,17 @@ div#rightside {
 
 .rightMenu-group.hide {
     display: none;
+}
+
+
+
+/* aplayer css */
+.aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
+    left: -66px !important;
+    /* 默认情况下缩进左侧66px，只留一点箭头部分 */
+}
+
+.aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
+    left: 0 !important;
+    /* 鼠标悬停是左侧缩进归零，完全显示按钮 */
 }

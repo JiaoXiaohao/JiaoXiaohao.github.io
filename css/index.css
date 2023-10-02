@@ -4336,6 +4336,21 @@ h1.page-title + .tag-cloud-list {
     display: none;
   }
 }
+#rightside #go-up .scroll-percent {
+  display: none;
+}
+#rightside #go-up.show-percent .scroll-percent {
+  display: block;
+}
+#rightside #go-up.show-percent .scroll-percent + i {
+  display: none;
+}
+#rightside #go-up:hover .scroll-percent {
+  display: none;
+}
+#rightside #go-up:hover .scroll-percent + i {
+  display: block;
+}
 #sidebar #menu-mask {
   position: fixed;
   z-index: 102;
@@ -4713,29 +4728,6 @@ mjx-assistive-mml {
 @media screen and (max-width: 768px) {
   .fancybox__toolbar__column.is-middle {
     display: none;
-  }
-}
-[data-theme="dark"] #web_bg {
-  background: url(/img/background.jpg);
-  background-attachment: local;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-@media screen and (max-width: 800px) {
-  #web_bg {
-    background: url(/img/background.jpg) !important;
-    background-attachment: local !important;
-    background-position: center !important;
-    background-size: cover !important;
-    background-repeat: no-repeat !important;
-  }
-  [data-theme="dark"] #web_bg {
-    background: url(/img/background.jpg) !important;
-    background-attachment: local !important;
-    background-position: center !important;
-    background-size: cover !important;
-    background-repeat: no-repeat !important;
   }
 }
 #article-container .btn-center {
