@@ -716,57 +716,7 @@ body::-webkit-scrollbar {
     background-size: cover;
 }
 
-/* !!!!!!!rightside */
-.error404+#rightside {
-    display: none
-}
 
-/* 侧边栏 */
-div#rightside {
-    display: var(--rightside-display);
-    opacity: 0.98 !important;
-    transform: translateX(-58px);
-}
-
-#rightside>div>a,
-#rightside>div>button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 38px;
-    height: 38px;
-    font-size: 18px;
-    border-radius: 6px;
-}
-
-@media screen and (max-width:900px) {
-    #rightside #mobile-toc-button {
-        display: block
-    }
-}
-
-@media screen and (max-width:900px) {
-    #rightside #hide-aside-btn {
-        display: none
-    }
-}
-
-.read-mode #footer,
-.read-mode #nav,
-.read-mode #post>:not(#post-info):not(.post-content),
-.read-mode #rightside,
-.read-mode #web_bg,
-.read-mode .highlight-tools,
-.read-mode .not-top-img,
-.read-mode .post-outdate-notice {
-    display: none !important
-}
-
-div#rightside {
-    display: var(--rightside-display);
-    opacity: .98 !important;
-    transform: translateX(-58px)
-}
 
 /* Animation */
 
