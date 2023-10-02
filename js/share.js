@@ -33,6 +33,34 @@ function share_() {
     // new ClipboardJS(".share", { text: function () { return '标题：' + document.title + '\n链接：' + url } });
     // btf.snackbarShow("本页链接已复制到剪切板，快去分享吧~")
 }
+// 监听复制事件
+document.addEventListener('copy', function (e) {
+    // 获取选中的文字
+    var text = window.getSelection().toString();
+    // 如果选中的文字中有链接，则将链接地址添加到末尾
+    if (text.indexOf('http') !== -1) {
+        text += '\n本文链接：' + document.location.href;
+    }
+    // 将新的文本放入剪贴板
+    e.clipboardData.setData('text/plain', text);
+    // Vue提示
+    new Vue({
+        data: function () {
+            this.$notify({
+                title: "成功复制选中内容🎉",
+                message: "您现在可以通过粘贴直接跟小伙伴分享了！",
+                position: 'top-left',
+                offset: 50,
+                showClose: true,
+                type: "success",
+                duration: 5000
+            });
+            // return { visible: false }
+        }
+    });
+    // 阻止默认行为，防止复制无效
+    e.preventDefault();
+});
 
 // 防抖
 function share() {
