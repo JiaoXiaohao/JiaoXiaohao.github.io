@@ -69,6 +69,20 @@ rmf.copyWordsLink = function () {
     txa.select();
     document.execCommand("Copy");
     document.body.removeChild(txa);
+    // VUE提示
+    new Vue({
+        data: function () {
+            this.$notify({
+                title: "成功复制本文链接🎉",
+                message: "您现在可以通过粘贴直接跟小伙伴分享了！",
+                position: 'top-left',
+                offset: 50,
+                showClose: true,
+                type: "success",
+                duration: 5000
+            });
+        }
+    })
 }
 rmf.switchReadMode = function () {
     const $body = document.body
@@ -89,14 +103,35 @@ rmf.switchReadMode = function () {
 
 //复制选中文字
 rmf.copySelect = function () {
-    document.execCommand('Copy', false, null);
+    // 复制选中文字
+    let text = document.getSelection().toString();
+    let txa = document.createElement("textarea");
+    txa.value = text;
+    document.body.appendChild(txa)
+    txa.select();
+    document.execCommand("Copy");
+    // VUE提示
+    new Vue({
+        data: function () {
+            this.$notify({
+                title: "成功复制选中文字🎉",
+                message: "您现在可以通过粘贴直接跟小伙伴分享了！",
+                position: 'top-left',
+                offset: 50,
+                showClose: true,
+                type: "success",
+                duration: 5000
+            });
+        }
+    })
 }
 
 //回到顶部
 rmf.scrollToTop = function () {
-    document.getElementsByClassName("menus_items")[1].setAttribute("style", "");
-    document.getElementById("name-container").setAttribute("style", "display:none");
-    btf.scrollToDest(0, 500);
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
 }
 
 document.body.addEventListener('touchmove', function () {
@@ -130,7 +165,7 @@ function popupMenu() {
         if (el.tagName == 'A') {
             $('#menu-to').show()
             rmf.open = function () {
-                if (el.href.indexOf("http://") == -1 && el.href.indexOf("https://") == -1 || el.href.indexOf("yisous.xyz") != -1) {
+                if (el.href.indexOf("http://") == -1 && el.href.indexOf("https://") == -1 || el.href.indexOf("jiaoxiaohao.xyz") != -1) {
                     pjax.loadUrl(el.href)
                 }
                 else {
@@ -149,6 +184,20 @@ function popupMenu() {
                 txa.select();
                 document.execCommand("Copy");
                 document.body.removeChild(txa);
+                // VUE提示
+                new Vue({
+                    data: function () {
+                        this.$notify({
+                            title: "成功复制链接🎉",
+                            message: "您现在可以通过粘贴直接跟小伙伴分享了！",
+                            position: 'top-left',
+                            offset: 50,
+                            showClose: true,
+                            type: "success",
+                            duration: 5000
+                        });
+                    }
+                })
             }
         } else if (el.tagName == 'IMG') {
             $('#menu-img').show()
@@ -160,6 +209,7 @@ function popupMenu() {
                 el.click()
             }
             rmf.copyLink = function () {
+                // 复制图片链接
                 let url = el.src
                 let txa = document.createElement("textarea");
                 txa.value = url;
@@ -167,6 +217,20 @@ function popupMenu() {
                 txa.select();
                 document.execCommand("Copy");
                 document.body.removeChild(txa);
+                // VUE提示
+                new Vue({
+                    data: function () {
+                        this.$notify({
+                            title: "成功复制图片链接🎉",
+                            message: "您现在可以通过粘贴直接跟小伙伴分享了！",
+                            position: 'top-left',
+                            offset: 50,
+                            showClose: true,
+                            type: "success",
+                            duration: 5000
+                        });
+                    }
+                })
             }
             rmf.saveAs = function () {
                 var a = document.createElement('a');
@@ -192,10 +256,19 @@ function popupMenu() {
                                 insertAtCursor(el, text)
                             })
                         } else {
-                            Snackbar.show({
-                                text: '请允许读取剪贴板！',
-                                pos: 'top-center',
-                                showAction: false,
+                            // VUE提示
+                            new Vue({
+                                data: function () {
+                                    this.$notify({
+                                        title: "读取剪贴板失败🍔",
+                                        message: "您的浏览器不支持读取剪贴板，请手动粘贴！",
+                                        position: 'top-left',
+                                        offset: 50,
+                                        showClose: true,
+                                        type: "warning",
+                                        duration: 5000
+                                    });
+                                }
                             })
                         }
                     })
