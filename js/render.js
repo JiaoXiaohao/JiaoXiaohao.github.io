@@ -566,7 +566,6 @@ document.onkeydown = function (e) {
         return false;
     }
 };
-
 // chart_2.js
 function switchPostChart() {
     // 这里为了统一颜色选取的是“明暗模式”下的两种字体颜色，也可以自己定义
