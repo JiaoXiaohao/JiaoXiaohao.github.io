@@ -73,7 +73,7 @@ span.temp {
 
 @font-face {
     font-family: qweather-icons;
-    src: url(http://110.42.211.245/fonts/qweather-icons.woff2) format("woff2"), url(http://110.42.211.245/fonts/qweather-icons.woff) format("woff"), url(http://110.42.211.245/fonts/qweather-icons.ttf) format("truetype")
+    src: url(fonts/qweather-icons.woff2?5bb5b475709c49961682eda055eb3dc5) format("woff2"), url(fonts/qweather-icons.woff?5bb5b475709c49961682eda055eb3dc5) format("woff"), url(fonts/qweather-icons.ttf?5bb5b475709c49961682eda055eb3dc5) format("truetype")
 }
 
 [class*=" qi-"]::before,
