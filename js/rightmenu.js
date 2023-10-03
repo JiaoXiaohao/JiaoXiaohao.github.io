@@ -110,6 +110,7 @@ rmf.copySelect = function () {
     document.body.appendChild(txa)
     txa.select();
     document.execCommand("Copy");
+    document.body.removeChild(txa);
     // VUE提示
     new Vue({
         data: function () {

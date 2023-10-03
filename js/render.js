@@ -19,12 +19,27 @@ function randomPost() {
 }
 // 分享本页
 function share_() {
-    let url = window.location.origin + window.location.pathname
+    // 获取当前页面的标题
+    let title = document.title;
+    // 获取当前页面的绝对路径
+    let url = location.href;
+    // 获取当前页面的描述内容
+    let description = document.querySelector('meta[name="description"]').getAttribute('content');
+    // 复制到剪贴板
+    let text = `${title}\n${description}\n${url}`;
+    // 创建一个textarea标签
+    let textarea = document.createElement('textarea');
+    // 设置textarea的内容为需要复制的内容
+    textarea.value = text;
+    // 将textarea标签添加到body中
+    document.body.appendChild(textarea);
+    // 选中textarea中的内容
+    textarea.select();
+    // 执行复制命令
+    document.execCommand('copy');
+    // 将textarea标签移除
+    textarea.remove();
     try {
-        // 截取标题
-        var title = document.title;
-        var subTitle = title.endsWith("| 🌏💻 Blog of GISer JiaoXiaohao 💻🌏") ? title.substring(0, title.length - 14) : title;
-        navigator.clipboard.writeText('🌏💻 Blog of GISer JiaoXiaohao 💻🌏的站内分享\n标题：' + subTitle + '\n链接：' + url + '\n欢迎来访！🍭🍭🍭');
         new Vue({
             data: function () {
                 this.$notify({
