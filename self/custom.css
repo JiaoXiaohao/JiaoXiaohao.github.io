@@ -356,44 +356,6 @@ div#archive {
     z-index: 2;
 }
 
-/* 鼠标样式 */
-#cursor {
-    position: fixed;
-    width: 16px;
-    height: 16px;
-    /* 这里改变跟随的底色 */
-    /* background: var(--theme-color); */
-    background: blue;
-    border-radius: 8px;
-    opacity: 0.1;
-    z-index: 10086;
-    pointer-events: none;
-    transition: 0.1s ease-in-out;
-    transition-property: background, opacity, transform;
-}
-
-
-#cursor.hidden {
-    opacity: 0;
-}
-
-#cursor.hover {
-    opacity: 0.5;
-    transform: scale(2);
-    -webkit-transform: scale(2);
-    -moz-transform: scale(2);
-    -ms-transform: scale(2.5);
-    -o-transform: scale(2);
-}
-
-#cursor.active {
-    opacity: 0.5;
-    transform: scale(0.5);
-    -webkit-transform: scale(0.5);
-    -moz-transform: scale(0.5);
-    -ms-transform: scale(0.5);
-    -o-transform: scale(0.5);
-}
 
 #veditor {
     background-image: url(/img/comment_bg.png);
@@ -1115,4 +1077,18 @@ svg.icon {
     vertical-align: -0.15em;
     fill: currentColor;
     overflow: hidden;
+}
+
+/* 设置鼠标样式 */
+/* 全局默认鼠标指针 */
+body,
+html {
+    cursor: url('/css/mouse/cursor.cur'), auto !important;
+}
+
+
+
+/* 选择链接标签时的鼠标指针 */
+a:hover {
+    cursor: url('/css/mouse/cursor_link.cur'), auto;
 }
