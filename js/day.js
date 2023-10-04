@@ -36,7 +36,7 @@ if (m == 8 && dd == 14) {
 
 
 // 节假日
-if (m == 10 && dd <= 3) {//国庆节
+if (m == 10 && dd <= 4) {//国庆节
     if (sessionStorage.getItem("isPopupWindow") != "1") {
         Swal.fire("祝祖国" + (y - 1949).toString() + "岁生日快乐！");
         sessionStorage.setItem("isPopupWindow", "1");
