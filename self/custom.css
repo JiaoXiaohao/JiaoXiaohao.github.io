@@ -409,47 +409,62 @@ div#archive {
     transition: all 0.2s ease-in-out 0s;
 }
 
-@font-face {
-    font-family: 'iconfont';
-    src: url('/fonts/iconfont.eot');
-    src: url('/fonts/iconfont.eot?#iefix') format('embedded-opentype'),
-        url('/fonts/iconfont.woff2') format('woff2'),
-        url('/fonts/iconfont.woff') format('woff'),
-        url('/fonts/iconfont.ttf') format('truetype'),
-        url('/fonts/iconfont.svg#iconfont') format('svg');
-}
-
-
 .iconfont {
     font-family: "iconfont" !important;
-    font-size: 16px;
+    font-size: 3em;
+    /* 可以定义图标大小 */
     font-style: normal;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-zhuanao:before {
-    content: "\e602";
+/* 若已经在项目设置中勾选了彩色选项，则无需再定义图标颜色*/
+.icon-rat:before {
+    color: #85c3de;
 }
 
-.icon-gangtiexia1:before {
-    content: "\e600";
+.icon-ox:before {
+    color: #ffaf6e;
 }
 
-.icon-gangtiexia2:before {
-    content: "\e6ae";
+.icon-tiger:before {
+    color: #f7c768;
 }
 
-.icon-gangtiexia3:before {
-    content: "\e603";
+.icon-rabbit:before {
+    color: #ffbdd8;
 }
 
-.icon-gangtiexiahong:before {
-    content: "\e604";
+.icon-dragon:before {
+    color: #ff8787;
 }
 
-.icon-gangtiexia:before {
-    content: "\e66a";
+.icon-snake:before {
+    color: #c3d686;
+}
+
+.icon-horse:before {
+    color: #ffaf6e;
+}
+
+.icon-goat:before {
+    color: #f7c768;
+}
+
+.icon-monkey:before {
+    color: #c3d686;
+}
+
+.icon-rooster:before {
+    color: #ff8787;
+}
+
+.icon-dog:before {
+    color: #85c3de;
+}
+
+.icon-boar:before {
+    color: #ffbdd8;
 }
 
 /*哔哩哔哩视频适配*/
@@ -1090,6 +1105,7 @@ body::-webkit-scrollbar {
 .hljs-strong {
     font-weight: bold;
 }
+
 /* 这里定义svg.icon，避免和Butterfly自带的note标签冲突 */
 svg.icon {
     /* 这里定义svg.icon，避免和Butterfly自带的note标签冲突 */
@@ -1100,4 +1116,3 @@ svg.icon {
     fill: currentColor;
     overflow: hidden;
 }
-

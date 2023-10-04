@@ -546,26 +546,26 @@ if (window.localStorage.getItem("fpson") == undefined || window.localStorage.get
 } else {
     document.getElementById("fps").style = "display:none!important"
 }
-// f12.js
-document.onkeydown = function (e) {
-    // 判断是否打开控制台
-    if (e.keyCode == 123) {
-        new Vue({
-            data: function () {
-                this.$message({
-                    title: "被发现了😜",
-                    message: "扒源记住要遵循GPL协议！",
-                    position: 'top-left',
-                    offset: 50,
-                    showClose: true,
-                    type: "warning",
-                    duration: 5000
-                });
-            }
-        })
-        return false;
-    }
-};
+// // f12.js
+// document.onkeydown = function (e) {
+//     // 判断是否打开控制台
+//     if (e.keyCode == 123) {
+//         new Vue({
+//             data: function () {
+//                 this.$message({
+//                     title: "被发现了😜",
+//                     message: "扒源记住要遵循GPL协议！",
+//                     position: 'top-left',
+//                     offset: 50,
+//                     showClose: true,
+//                     type: "warning",
+//                     duration: 5000
+//                 });
+//             }
+//         })
+//         return false;
+//     }
+// };
 // chart_2.js
 function switchPostChart() {
     // 这里为了统一颜色选取的是“明暗模式”下的两种字体颜色，也可以自己定义
