@@ -639,7 +639,7 @@ body::-webkit-scrollbar {
     background: url(https://q2.qlogo.cn/headimg_dl?dst_uin=2745602379&spec=5) no-repeat center center;
     background-size: cover;
 }
-
+/* 个人信息栏 */
 .card-info-avatar .author-status-box {
     position: absolute;
     bottom: 0;
