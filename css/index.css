@@ -886,7 +886,7 @@ canvas:not(#ribbon-canvas),
   --pseudo-hover: #ff7242;
   --headline-presudo: #a0a0a0;
   --scrollbar-color: #49b1f5;
-  --background-img: url("https://s2.loli.net/2023/10/08/nwFN1ZeuVf9xazP.jpg");
+  --background-img: url("/img/background.jpg");
 }
 body {
   position: relative;
@@ -920,7 +920,7 @@ input::placeholder {
   z-index: -999;
   width: 100%;
   height: 100%;
-  background: url(https://s2.loli.net/2023/10/08/nwFN1ZeuVf9xazP.jpg);
+  background: url(/img/background.jpg);
   background-attachment: local;
   background-position: center;
   background-size: cover;
