@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>Continental-scale quantification of post-fire vegetation greenness recovery in temperate and boreal North America --Yang Jia</title>
+      <link href="/2023/10/16/RSE-Yang/"/>
+      <url>/2023/10/16/RSE-Yang/</url>
+      
+        <content type="html"><![CDATA[<!-- 引用论文 --><details class="folding-tag"><summary> 预览PDF </summary>              <div class="content">              <div class="row">   <embed src="1-s2.0-S0034425717303383-main.pdf" width="100%" height="550" type="application/pdf"></div>              </div>            </details><div class="tag link"><a class="link-card" title="论文原址" href="https://doi.org/10.1016/j.rse.2017.07.022"><div class="left"><img src="https://sciencedirect.elseviercdn.cn/shared-assets/24/images/elsevier-non-solus-new-grey.svg"></div><div class="right"><p class="text">论文原址</p><p class="url">https://doi.org/10.1016/j.rse.2017.07.022</p></div></a></div><p>本文为<span class="p red">杨佳教授</span>发表在Remote Sensing of Environment上的论文解读。</p><h2 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h2><p>有关<strong>火灾后植被恢复的知识和信息</strong>对于我们了解生态系统的稳定性和复原力以应对当前和未来的干扰至关重要。尽管先前的研究已在景观和区域层面研究了火灾后的植被恢复情况,但缺乏对整个大陆的分析,限制了我们对火灾对各生态区和气候带植被恢复的影响的了解。火对跨生态区和气候带植被恢复的影响。借助先进的卫星观测技术和大规模数据库开发,我们有可能探索陆地生态系统对火灾干扰的同期和滞后反应的大规模影响。在这项研究中 我们通过整合两个国家级火灾周边数据,研究了北美火灾后早期植被绿度的恢复情况。本研究通过整合两个国家级火灾周边数据集和多个中分辨率成像光谱仪(MODIS)产品。我们开发了一种新算法来估算火灾对<strong>归一化差异植被指数(NDVI)</strong>的影响。我们的结果与中纬度生态区相比,高纬度生态区的<strong>NDVI</strong>下降幅度更大,恢复时间更长。我们还发现,植被组成和火灾严重程度的变化可以解释火灾后植被绿度恢复的很大一部分原因。我们基于卫星的分析表明,NDVI 的恢复时间比现有的估计时间更长,这表明火灾对生态系统的影响比以前认为的更强。本研究的结果表明,<strong>植被-火灾模型</strong>需要<em>更复杂的火灾严重程度和火后植被恢复参数化方案</em>,以更好地模拟<em>陆地碳循环</em>和<em>气候-生态系统反馈</em>。</p><h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><p>火灾是全球范围内普遍存在的土地干扰事件(Bond等,2005年;Bowman等,2009年;Chuvieco等,2016年;van der Werf等,2010年),它显著改变了植被组成、陆地生物地球化学循环和全球生态系统-气候反馈(Bond等,2005年;Littell等,2016年;Randerson等,2006年;Rogers等,2013年;Ward等,2012年;Yang等,2015a年)。火灾已被公认为地球系统模型(ESM)中至关重要的组成部分(例如,Arora和Boer,2005年;Lasslop等,2014年;Li等,2012年),但目前火灾模型中模拟生态系统过程中的火灾影响的参数化方案存在显著差异。目前尚不清楚哪种类型的方案在代表火灾影响方面具有更好的性能(Hantson等,2016年)。此外,对火灾后植被恢复的模拟尚未得到大规模基准数据集的验证,仍然是发展植被火灾模型的主要挑战之一。这种差距可能导致我们在理解火灾对生物地球化学过程的影响(Tian等,2016年)及其对气候系统的潜在反馈方面存在较大的不确定性(Rogers等,2013年)。因此,了解火灾后植被恢复和大规模基准数据集对于火灾模型的发展和验证至关重要(Kelley等,2013年;Hantson等,2016年;Yang等,2015b年)。</p><p>遥感技术提供了在多个空间尺度上验证和约束火灾影响模型结果的有用信息。在景观和生态系统尺度上,高分辨率光学影像(Meng等,2017年;Quintano等,2013年)和航空LiDAR数据(McCarley等,2017年)已被应用于量化火灾严重程度并研究火灾后植被动态(Bolton等,2015年;Fernandez-Manso等,2016年;Meng等,2015年;Storey等,2016年;Wulder等,2009年)。这些高分辨率遥感影像在特别是对于地理分散的林分的植被恢复评估方面具有高精度。在区域尺度上,相对粗分辨率的卫星影像(如AVHRR和MODIS)更受欢迎,用于研究火灾后植被动态。例如,北方针叶林地区的研究表明,北美地区针叶林绿度的恢复时间在5至9年之间变化(Goetz等,2006年;Hicke等,2003年;Jin等,2012年),而在中西伯利亚超过13年(Cuevas-Gonzáles等,2009年)。尽管遥感方法已经研究了植被结构(如叶面积指数和树高)的恢复情况(例如Magnussen和Wulder,2012年;McMichael等,2004年;McCarley等,2017年),但更多基于卫星的研究侧重于植被绿度的光谱恢复(如归一化差异植被指数,NDVI和增强植被指数,EVI)(Goetz等,2007年)。高分辨率和粗分辨率的遥感研究都确定了植被物种、气候、火灾严重程度、地形和人为管理等因素对火灾后植被恢复轨迹的影响是关键的(例如Alcaraz-Segura等,2010年;Chu和Guo,2013年;Meng等,2015年;White等,1996年;Zhao等,2016年)。</p><p>大规模植被恢复研究(例如Goetz等,2006年;Jin等,2012年)通常以生态区作为基本生态单元,因为不同的生态区与不同的火灾制度、植被物种和气候条件相关联(Chuvieco等,2008年)。在北美的北方针叶林中,以高烧伤严重程度和较长的间隔期为特征的更新林火是主要的火灾类型(Rogers等,2015年),而低强度的预设火灾在美国东南部更为普遍(Mitchell等,2014年)。火灾制度和植被类型的空间变异可能导致不同的植被恢复轨迹。在生态区和气候区跨足的大陆尺度上量化火灾后植被恢复轨迹对于更好地理解火灾对生态系统的影响、制定火灾后土地管理实践以及改进地球系统模型中的火灾参数化是至关重要的(Bartels等,2016年;Goetz等,2005年;Randerson等,2006年;Rogers等,2013年)。</p><p>在本研究中,我们选择了北美(包括美国和加拿大)作为研究领域,通过使用两个国家级火灾周界数据集和中分辨率成像光谱仪(MODIS)的归一化植被指数(NDVI),来研究火灾后植被绿度的恢复情况。在过去几十年里,北美在气候变暖和干燥条件下经历了火灾频率和烧毁面积的显著增加(Dennison等,2014年;Kasischke和Turetsky,2006年;Stocks等,2002年;Westerling等,2006年;Yang等,2015b年)。频繁的火灾活动和火灾制度的广泛空间变异使得北美成为研究火灾后植被恢复的宝贵自然实验室。</p><p>本研究的目标有三个方面：</p><ul><li>(1)在十年的火灾后期量化火灾对植被绿度的影响;</li><li>(2)考察植被类型和火灾严重程度对火灾后植被绿度动态的影响;</li><li>(3)讨论未来改进植被-火灾模型的方向。</li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> WildFire Prediction </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Essay </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Wildfire Prediction Using Deep Neural Networks--CNN and LSTM--A Global Dynamic Modeling Approach--Ecological Applications</title>
       <link href="/2023/10/09/ReadAccording/"/>
       <url>/2023/10/09/ReadAccording/</url>
@@ -22,9 +47,9 @@
       
         <tags>
             
-            <tag> DL </tag>
-            
             <tag> Essay </tag>
+            
+            <tag> DL </tag>
             
         </tags>
       
