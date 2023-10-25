@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>随机森林分类原理以及Python实现</title>
+      <link href="/2023/10/25/randomforest/"/>
+      <url>/2023/10/25/randomforest/</url>
+      
+        <content type="html"><![CDATA[<h2 id="1-随机森林分类原理"><a href="#1-随机森林分类原理" class="headerlink" title="1.随机森林分类原理"></a>1.随机森林分类原理</h2><h3 id="1-1-什么是决策树"><a href="#1-1-什么是决策树" class="headerlink" title="1.1.什么是决策树"></a>1.1.什么是决策树</h3><p>决策树<strong>(Decision Tree)</strong>是一种基本的分类与回归方法。决策树模型呈树形结构，在分类问题中，表示基于特征对实例进行分类的过程。它可以认为是if-then规则的集合，也可以认为是定义在特征空间与类空间上的条件概率分布。其主要优点是模型具有可读性，分类速度快。学习时，利用训练数据，根据损失函数最小化的原则建立决策树模型。预测时，对新的数据，利用决策树模型进行分类。</p><h2 id="1-2-什么是集成学习"><a href="#1-2-什么是集成学习" class="headerlink" title="1.2.什么是集成学习"></a>1.2.什么是集成学习</h2><p>集成学习<strong>(Integrated learning)</strong>是一种机器学习方法，它通过构建并结合多个学习器来完成学习任务。集成学习的基本假设是：存在一组学习器，当它们结合在一起时，比单个学习器更有效。集成学习的关键问题是如何有效地结合多个学习器的预测结果，这个问题被称为结合策略。集成学习的结合策略通常分为两种：一种是基于模型的结合策略(如Boosting)，另一种是基于投票的结合策略(如Bagging)。</p><h3 id="1-3-随机森林分类的基本原理"><a href="#1-3-随机森林分类的基本原理" class="headerlink" title="1.3.随机森林分类的基本原理"></a>1.3.随机森林分类的基本原理</h3><p>随机森林<strong>(Random Forest)</strong>是集成学习的一种典型代表，它是由多棵决策树组成的分类器，其输出的类别是由个别树输出的类别的众数而定。随机森林的每一棵决策树之间是没有关联的，每棵决策树的构建是相互独立的。随机森林的训练过程主要包括两个步骤：随机选择样本，随机选择特征。</p><h3 id="1-4-随机森林分类的基本流程"><a href="#1-4-随机森林分类的基本流程" class="headerlink" title="1.4.随机森林分类的基本流程"></a>1.4.随机森林分类的基本流程</h3><p>随机森林的基本流程如下图所示：</p><p><img src="/2023/10/25/randomforest/S1.svg" alt="S1"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> DL </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> DL </tag>
+            
+            <tag> Python </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Continental-scale quantification of post-fire vegetation greenness recovery in temperate and boreal North America --Yang Jia</title>
       <link href="/2023/10/16/RSE-Yang/"/>
       <url>/2023/10/16/RSE-Yang/</url>
@@ -72,11 +99,11 @@
       
         <tags>
             
+            <tag> DL </tag>
+            
             <tag> Python </tag>
             
             <tag> CV </tag>
-            
-            <tag> DL </tag>
             
         </tags>
       
