@@ -886,7 +886,7 @@ canvas:not(#ribbon-canvas),
   --pseudo-hover: #ff7242;
   --headline-presudo: #a0a0a0;
   --scrollbar-color: #49b1f5;
-  --background-img: url("/img/background.jpg");
+  --loading-background-img: url("/img/background.jpg");
 }
 body {
   position: relative;
@@ -2587,7 +2587,7 @@ h1.page-title + .tag-cloud-list {
   width: 100%;
   height: 100%;
   position: fixed;
-  background: var(--background-img);
+  background: var(--loading-background-img);
   background-size: cover;
   background-position: center;
   z-index: 1001;
