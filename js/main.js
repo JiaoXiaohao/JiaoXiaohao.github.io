@@ -1,6 +1,6 @@
 
 
-function loadScript(src, defer, async, autoReplaceSvg, root = "/hexo-theme-lab") {
+function loadScript(src, defer, async, autoReplaceSvg, root = "/") {
     var script = document.createElement('script');
     script.src = root + src;
     script.defer = defer;
@@ -12,17 +12,17 @@ function loadScript(src, defer, async, autoReplaceSvg, root = "/hexo-theme-lab")
 }
 
 (function () {
-    let timeout = setTimeout(function() {
+    let timeout = setTimeout(function () {
         document.body.style.opacity = 1;
     }, 1000);
 
-    window.onload = function() {
+    window.onload = function () {
         clearTimeout(timeout);
         document.body.style.opacity = 1;
     };
 })();
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     loadScript("/js/fontawesome.js", false, true, "nest");
     loadScript("/js/header.js", true, false);
     loadScript("/js/footer.js", true, false);
