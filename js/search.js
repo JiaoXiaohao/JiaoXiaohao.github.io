@@ -1,4 +1,4 @@
-(function () {
+(function() {
     let searchData = [];
     const searchResult = document.querySelector('#search-input .panel-blocks');
     const tabAll = document.querySelector('#tab-all');
@@ -6,7 +6,7 @@
     const tabProjects = document.querySelector('#tab-projects');
     const tabResearch = document.querySelector('#tab-research');
 
-    fetch('search.json')
+    fetch('/hexo-theme-lab/search.json')
         .then(function (response) {
             return response.json();
         })
@@ -24,7 +24,7 @@
         } else return '';
     }
 
-    tabAll.addEventListener('click', function () {
+    tabAll.addEventListener('click', function() {
         tabAll.classList.add('is-active');
         tabTeam.classList.remove('is-active');
         tabProjects.classList.remove('is-active');
@@ -34,7 +34,7 @@
         });
     });
 
-    tabTeam.addEventListener('click', function () {
+    tabTeam.addEventListener('click', function() {
         tabAll.classList.remove('is-active');
         tabTeam.classList.add('is-active');
         tabProjects.classList.remove('is-active');
@@ -44,7 +44,7 @@
         });
     });
 
-    tabProjects.addEventListener('click', function () {
+    tabProjects.addEventListener('click', function() {
         tabAll.classList.remove('is-active');
         tabTeam.classList.remove('is-active');
         tabProjects.classList.add('is-active');
@@ -54,7 +54,7 @@
         });
     });
 
-    tabResearch.addEventListener('click', function () {
+    tabResearch.addEventListener('click', function() {
         tabAll.classList.remove('is-active');
         tabTeam.classList.remove('is-active');
         tabProjects.classList.remove('is-active');
@@ -63,8 +63,8 @@
             el.style.display = el.classList.contains('block-research') ? 'block' : 'none';
         });
     });
-
-    document.querySelector('#search-input .input').addEventListener('keyup', function () {
+        
+    document.querySelector('#search-input .input').addEventListener('keyup', function() {
         let query = this.value.trim();
         if (!query) {
             searchResult.innerHTML = '';
@@ -75,11 +75,11 @@
         searchData.forEach(function (post) {
             if ((post.title && post.title.indexOf(query) !== -1) || (post.content && post.content.indexOf(query) !== -1)) {
                 html += '<a class="panel-block ' + checkUrl(post.url) + '" href="' + post.url + '">' +
-                    '<span class="panel-icon">' +
-                    '<i class="fas fa-book" aria-hidden="true"></i>' +
-                    '</span>' +
-                    post.title +
-                    '</a>';
+                            '<span class="panel-icon">' +
+                                '<i class="fas fa-book" aria-hidden="true"></i>' +
+                            '</span>' +
+                            post.title +
+                        '</a>';
             }
         });
 
