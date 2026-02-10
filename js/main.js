@@ -1,6 +1,6 @@
 
 
-function loadScript(src, defer, async, autoReplaceSvg, root = "/hexo-theme-lab") {
+function loadScript(src, defer, async, autoReplaceSvg, root = "/") {
     var script = document.createElement('script');
     script.src = root + src;
     script.defer = defer;
