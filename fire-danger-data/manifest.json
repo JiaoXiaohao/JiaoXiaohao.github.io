@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-06-19T09:17:27.078Z",
+  "datasetRoot": "/fire-danger-data/",
+  "indices": [
+    {
+      "id": "BI",
+      "name": "Burning Index",
+      "units": "index",
+      "description": "Composite fire danger index related to flame length and suppression difficulty."
+    },
+    {
+      "id": "ERC",
+      "name": "Energy Release Component",
+      "units": "index",
+      "description": "Fire danger index representing the available energy per unit area within the flaming front."
+    },
+    {
+      "id": "FWI",
+      "name": "Fire Weather Index",
+      "units": "index",
+      "description": "Canadian Forest Fire Weather Index System indicator of potential fire intensity."
+    },
+    {
+      "id": "IC",
+      "name": "Ignition Component",
+      "units": "percent",
+      "description": "Probability that a firebrand will cause a reportable fire under current conditions."
+    },
+    {
+      "id": "SC",
+      "name": "Spread Component",
+      "units": "index",
+      "description": "Fire danger index related to expected forward rate of spread."
+    },
+    {
+      "id": "WFL",
+      "name": "Wildland Fire Likelihood",
+      "units": "probability",
+      "description": "Spatial likelihood of wildland fire occurrence or ignition under modeled conditions."
+    }
+  ],
+  "datasets": []
+}

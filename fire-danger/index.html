@@ -1,0 +1,123 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Wildfire Danger Index | Wildfire Risk and Earth System Laboratory</title>
+  <meta name="description" content="Interactive daily wildfire danger index map, including Burning Index, Fire Weather Index, and Wildland Fire Likelihood GeoTIFF products.">
+  <meta name="generator" content="Hexo">
+  <link rel="preconnect" href="https://unpkg.com">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/css/site.css">
+  <style>
+    :root {
+      --bg: #f7f8f3;
+      --surface: #ffffff;
+      --text: #1c2520;
+      --muted: #607069;
+      --line: #d9ded5;
+      --accent: #be4b2f;
+      --accent-dark: #7d2f20;
+      --green: #275f4b;
+      --gold: #d49d32;
+      --blue: #2f668c;
+      --hero-image: url("https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1800&q=80");
+      --hero-overlay: linear-gradient(90deg, rgba(28, 37, 32, 0.88), rgba(39, 95, 75, 0.6));
+      --header-bg: rgba(247, 248, 243, 0.94);
+    }
+  </style>
+  
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="/" aria-label="Wildfire Risk and Earth System Laboratory home">
+      <span class="brand-mark">WR</span>
+      <span>
+        <strong>Wildfire Risk Lab</strong>
+        <small>Fire danger, climate, and geospatial science</small>
+      </span>
+    </a>
+    <nav class="site-nav" aria-label="Main navigation">
+      
+        <a href="/" class="">Home</a>
+      
+        <a href="/research/" class="">Research</a>
+      
+        <a href="/fire-danger/" class="active">Wildfire Danger Index</a>
+      
+        <a href="/people/" class="">People</a>
+      
+        <a href="/about/" class="">About</a>
+      
+    </nav>
+  </header>
+
+  <main>
+    <article class="page-content">
+  <h1 id="Wildfire-Danger-Index"><a href="#Wildfire-Danger-Index" class="headerlink" title="Wildfire Danger Index"></a>Wildfire Danger Index</h1><p>The portal displays daily laboratory-produced GeoTIFF layers for wildfire danger monitoring. Supported products include Burning Index, Fire Weather Index, Wildland Fire Likelihood, and related operational fire danger metrics.</p>
+<section class="index-dashboard" data-fire-danger-app>
+  <div class="control-panel" aria-label="Fire danger map controls">
+    <label>
+      <span>Index</span>
+      <select id="index-select"></select>
+    </label>
+    <label>
+      <span>Date</span>
+      <select id="date-select"></select>
+    </label>
+    <button id="download-current" class="button" type="button">Download GeoTIFF</button>
+  </div>
+
+  <div class="map-shell">
+    <div id="fire-map" aria-label="Wildfire danger map"></div>
+    <div class="legend" id="fire-legend" aria-live="polite"></div>
+  </div>
+
+  <div class="status-grid">
+    <article>
+      <h2>Selected Layer</h2>
+      <dl id="layer-details">
+        <dt>Status</dt>
+        <dd>Loading available datasets...</dd>
+      </dl>
+    </article>
+    <article>
+      <h2>Data Update Notes</h2>
+      <p>Daily GeoTIFF files are published from <code>source/fire-danger-data/</code>. After adding new files, run <code>npm run data:update</code> and rebuild the site.</p>
+    </article>
+  </div>
+</section>
+
+<h2 id="Data-Policy"><a href="#Data-Policy" class="headerlink" title="Data Policy"></a>Data Policy</h2><p>Each raster layer should be accompanied by clear metadata: index name, production date, units, spatial extent, processing version, and contact point. For operational use, always check the timestamp and notes before making decisions.</p>
+<h2 id="Supported-Products"><a href="#Supported-Products" class="headerlink" title="Supported Products"></a>Supported Products</h2><ul>
+<li><strong>BI:</strong> Burning Index.</li>
+<li><strong>FWI:</strong> Fire Weather Index.</li>
+<li><strong>WFL:</strong> Wildland Fire Likelihood.</li>
+<li><strong>ERC:</strong> Energy Release Component.</li>
+<li><strong>SC:</strong> Spread Component.</li>
+<li><strong>IC:</strong> Ignition Component.</li>
+</ul>
+<p>Additional products can be added by placing GeoTIFF files in the data directory and including the desired <code>indexId</code> in either the file name or sidecar metadata. Recommended filenames include <code>BI_YYYY-MM-DD.tif</code>, <code>FWI_YYYY-MM-DD.tif</code>, and <code>WFL_YYYY-MM-DD.tif</code>.</p>
+
+</article>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 Wildfire Risk and Earth System Laboratory. Built with Hexo for reproducible research communication.</p>
+  </footer>
+
+  
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  
+    <script src="https://unpkg.com/georaster@1.6.0/dist/georaster.browser.bundle.min.js"></script>
+  
+    <script src="https://unpkg.com/georaster-layer-for-leaflet@3.10.0/dist/georaster-layer-for-leaflet.min.js"></script>
+  
+    <script src="/js/fire-danger.js"></script>
+  
+</body>
+</html>
