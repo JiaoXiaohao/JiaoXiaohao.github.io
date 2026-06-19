@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-19T09:17:27.078Z",
+  "generatedAt": "2026-06-19T09:52:45.120Z",
   "datasetRoot": "/fire-danger-data/",
   "indices": [
     {
@@ -39,5 +39,41 @@
       "description": "Spatial likelihood of wildland fire occurrence or ignition under modeled conditions."
     }
   ],
-  "datasets": []
+  "datasets": [
+    {
+      "id": "BI_2026-06-12",
+      "indexId": "BI",
+      "indexName": "Burning Index",
+      "title": "Burning Index, 2026-06-12",
+      "date": "2026-06-12",
+      "units": "index",
+      "min": 6.765554560117515e-8,
+      "max": 0.0009997781165432505,
+      "version": "v1.0",
+      "productionTime": "2026-06-19T09:49:38.050062Z",
+      "source": "Daily laboratory fire danger processing pipeline",
+      "contact": "firedata@example.org",
+      "description": "Composite fire danger index related to flame length and suppression difficulty.",
+      "filename": "BI_2026-06-12.tif",
+      "file": "/fire-danger-data/BI_2026-06-12.tif",
+      "band": 1,
+      "width": 100,
+      "height": 100,
+      "bounds": [
+        0,
+        -100,
+        100,
+        0
+      ],
+      "crs": "EPSG:4326",
+      "targetCrs": "EPSG:4326",
+      "sourceCrs": "EPSG:4326",
+      "resampling": "bilinear",
+      "resolution": [
+        1,
+        1
+      ],
+      "dataType": "float64"
+    }
+  ]
 }
