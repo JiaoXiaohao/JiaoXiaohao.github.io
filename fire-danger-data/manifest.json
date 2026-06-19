@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-19T10:39:13.793Z",
+  "generatedAt": "2026-06-19T12:25:03.172Z",
   "datasetRoot": "/fire-danger-data/",
   "indices": [
     {
@@ -23,7 +23,7 @@
     {
       "id": "IC",
       "name": "Ignition Component",
-      "units": "percent",
+      "units": "%",
       "description": "Probability that a firebrand will cause a reportable fire under current conditions."
     },
     {
@@ -35,7 +35,7 @@
     {
       "id": "WFL",
       "name": "Wildland Fire Likelihood",
-      "units": "probability",
+      "units": "%",
       "description": "Spatial likelihood of wildland fire occurrence or ignition under modeled conditions."
     }
   ],
