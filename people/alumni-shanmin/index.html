@@ -26,6 +26,9 @@
       --hero-overlay: linear-gradient(90deg, rgba(16, 28, 24, 0.9), rgba(39, 95, 75, 0.62));
       --header-bg: rgba(247, 248, 243, 0.94);
       --page-accent: linear-gradient(180deg, rgba(39, 95, 75, 0.08), rgba(247, 248, 243, 0) 320px);
+      --research-grid-template: repeat(2, minmax(0, 1fr));
+      --people-grid-template: repeat(3, minmax(0, 1fr));
+      --home-features-grid-template: repeat(3, minmax(0, 1fr));
     }
   </style>
   
@@ -53,7 +56,11 @@
   
   <header class="site-header">
     <a class="brand" href="/" aria-label="Wildfire Risk and Earth System Laboratory home">
-      <span class="brand-mark">WR</span>
+      <span class="brand-mark brand-mark--image" style="--brand-mark-width: 46px; --brand-mark-height: 46px">
+        
+          <img src="/images/lab-mark.svg" alt="Wildfire Risk Lab logo">
+        
+      </span>
       <span>
         <strong>Wildfire Risk Lab</strong>
         <small>Fire danger, climate, and geospatial science</small>
@@ -77,7 +84,7 @@
   <main>
     <article class="page-content">
   <section class="profile-hero-card">
-  <span class="profile-avatar">AL</span>
+  <img class="profile-photo" src="/images/people/person-placeholder.svg" alt="Alumni portrait">
   <div>
     <p class="profile-kicker">Alumni</p>
     <h1>Alumni</h1>

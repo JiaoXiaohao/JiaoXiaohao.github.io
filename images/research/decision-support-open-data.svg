@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" role="img" aria-labelledby="title desc">
+  <title id="title">Decision support and open data placeholder</title>
+  <desc id="desc">A stylized dashboard and metadata workflow graphic.</desc>
+  <rect width="960" height="540" fill="#f7f8f3"/>
+  <rect x="64" y="58" width="832" height="424" rx="28" fill="#ffffff" stroke="#d9ded5"/>
+  <rect x="104" y="104" width="230" height="330" rx="16" fill="#12221d"/>
+  <rect x="136" y="142" width="144" height="20" rx="10" fill="#f2c15f"/>
+  <rect x="136" y="188" width="166" height="14" rx="7" fill="#ffffff" opacity=".7"/>
+  <rect x="136" y="218" width="126" height="14" rx="7" fill="#ffffff" opacity=".7"/>
+  <rect x="136" y="272" width="146" height="82" rx="10" fill="#275f4b"/>
+  <rect x="378" y="104" width="384" height="132" rx="16" fill="#edf1e9"/>
+  <rect x="412" y="136" width="214" height="18" rx="9" fill="#275f4b"/>
+  <rect x="412" y="174" width="286" height="14" rx="7" fill="#607069" opacity=".45"/>
+  <rect x="378" y="270" width="176" height="164" rx="16" fill="#e8eee6"/>
+  <rect x="586" y="270" width="176" height="164" rx="16" fill="#e8eee6"/>
+  <path d="M421 376c40-52 79-56 120-12" fill="none" stroke="#be4b2f" stroke-width="14" stroke-linecap="round"/>
+  <path d="M629 356h90M629 386h66" stroke="#2f668c" stroke-width="14" stroke-linecap="round"/>
+  <circle cx="808" cy="170" r="44" fill="#d49d32"/>
+  <path d="M790 170h36M808 152v36" stroke="#fff" stroke-width="12" stroke-linecap="round"/>
+</svg>

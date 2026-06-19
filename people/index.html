@@ -26,6 +26,9 @@
       --hero-overlay: linear-gradient(90deg, rgba(16, 28, 24, 0.9), rgba(39, 95, 75, 0.62));
       --header-bg: rgba(247, 248, 243, 0.94);
       --page-accent: linear-gradient(180deg, rgba(39, 95, 75, 0.08), rgba(247, 248, 243, 0) 320px);
+      --research-grid-template: repeat(2, minmax(0, 1fr));
+      --people-grid-template: repeat(3, minmax(0, 1fr));
+      --home-features-grid-template: repeat(3, minmax(0, 1fr));
     }
   </style>
   
@@ -53,7 +56,11 @@
   
   <header class="site-header">
     <a class="brand" href="/" aria-label="Wildfire Risk and Earth System Laboratory home">
-      <span class="brand-mark">WR</span>
+      <span class="brand-mark brand-mark--image" style="--brand-mark-width: 46px; --brand-mark-height: 46px">
+        
+          <img src="/images/lab-mark.svg" alt="Wildfire Risk Lab logo">
+        
+      </span>
       <span>
         <strong>Wildfire Risk Lab</strong>
         <small>Fire danger, climate, and geospatial science</small>
@@ -78,7 +85,7 @@
     <article class="page-content">
   <h1 id="People"><a href="#People" class="headerlink" title="People"></a>People</h1><h2 id="Principal-Investigator"><a href="#Principal-Investigator" class="headerlink" title="Principal Investigator"></a>Principal Investigator</h2><section class="people-grid">
   <a class="person-card" href="/people/lab-director/">
-    <span class="person-initials">LD</span>
+    <img class="person-photo" src="/images/people/person-placeholder.svg" alt="Dr. Lab Director portrait">
     <strong>Dr. Lab Director</strong>
     <em>Professor of Fire Science and Earth System Modeling</em>
     <span>Wildfire danger forecasting, climate extremes, geospatial decision support.</span>
@@ -88,14 +95,14 @@
 
 <h2 id="Research-Staff"><a href="#Research-Staff" class="headerlink" title="Research Staff"></a>Research Staff</h2><section class="people-grid">
   <a class="person-card" href="/people/research-scientist/">
-    <span class="person-initials">RS</span>
+    <img class="person-photo" src="/images/people/person-placeholder.svg" alt="Research Scientist portrait">
     <strong>Research Scientist</strong>
     <em>Operational Fire Danger Products</em>
     <span>Fire danger index production, model evaluation, and reproducible data pipelines.</span>
     <small>View profile</small>
   </a>
   <a class="person-card" href="/people/geospatial-data-engineer/">
-    <span class="person-initials">GD</span>
+    <img class="person-photo" src="/images/people/person-placeholder.svg" alt="Geospatial Data Engineer portrait">
     <strong>Geospatial Data Engineer</strong>
     <em>Raster Systems and Web Mapping</em>
     <span>Raster processing, web mapping, metadata standards, and automated publishing.</span>
@@ -105,49 +112,49 @@
 
 <h2 id="Students"><a href="#Students" class="headerlink" title="Students"></a>Students</h2><section class="people-grid">
   <a class="person-card" href="/people/graduate-researcher-fire-weather/">
-    <span class="person-initials">GF</span>
+    <img class="person-photo" src="/images/people/person-placeholder.svg" alt="Graduate Researcher portrait">
     <strong>Graduate Researcher</strong>
     <em>Fire Weather and Remote Sensing</em>
     <span>Fire-weather relationships, vegetation stress, and remote sensing.</span>
     <small>View profile</small>
   </a>
   <a class="person-card" href="/people/graduate-researcher-fire-weather-2/">
-    <span class="person-initials">GF</span>
+    <img class="person-photo" src="/images/people/person-placeholder.svg" alt="Graduate Researcher portrait">
     <strong>Graduate Researcher</strong>
     <em>Fire Weather and Remote Sensing</em>
     <span>Spatial evaluation of daily raster products and environmental drivers.</span>
     <small>View profile</small>
   </a>
   <a class="person-card" href="/people/graduate-researcher-fire-weather-3/">
-    <span class="person-initials">GF</span>
+    <img class="person-photo" src="/images/people/person-placeholder.svg" alt="Graduate Researcher portrait">
     <strong>Graduate Researcher</strong>
     <em>Fire Weather and Remote Sensing</em>
     <span>Vegetation stress, fuel condition indicators, and fire danger mapping.</span>
     <small>View profile</small>
   </a>
   <a class="person-card" href="/people/graduate-researcher-risk-communication/">
-    <span class="person-initials">GR</span>
+    <img class="person-photo" src="/images/people/person-placeholder.svg" alt="Graduate Researcher portrait">
     <strong>Graduate Researcher</strong>
     <em>Risk Communication</em>
     <span>Wildfire risk communication and uncertainty visualization.</span>
     <small>View profile</small>
   </a>
   <a class="person-card" href="/people/graduate-researcher-risk-communication-2/">
-    <span class="person-initials">GR</span>
+    <img class="person-photo" src="/images/people/person-placeholder.svg" alt="Graduate Researcher portrait">
     <strong>Graduate Researcher</strong>
     <em>Risk Communication</em>
     <span>User-centered map design and partner-facing wildfire information.</span>
     <small>View profile</small>
   </a>
   <a class="person-card" href="/people/graduate-researcher-risk-communication-3/">
-    <span class="person-initials">GR</span>
+    <img class="person-photo" src="/images/people/person-placeholder.svg" alt="Graduate Researcher portrait">
     <strong>Graduate Researcher</strong>
     <em>Risk Communication</em>
     <span>Operational product interpretation and uncertainty communication.</span>
     <small>View profile</small>
   </a>
   <a class="person-card" href="/people/undergraduate-researcher/">
-    <span class="person-initials">UR</span>
+    <img class="person-photo" src="/images/people/person-placeholder.svg" alt="Undergraduate Researcher portrait">
     <strong>Undergraduate Researcher</strong>
     <em>Data Analysis and Visualization</em>
     <span>Data analysis, visualization, and web development support.</span>
@@ -157,7 +164,7 @@
 
 <h2 id="Alumni"><a href="#Alumni" class="headerlink" title="Alumni"></a>Alumni</h2><section class="people-grid">
   <a class="person-card" href="/people/alumni-shanmin/">
-    <span class="person-initials">AL</span>
+    <img class="person-photo" src="/images/people/person-placeholder.svg" alt="Alumni portrait">
     <strong>Alumni</strong>
     <em>Former members of the laboratory</em>
     <span>Contributions to wildfire research and operational forecasting.</span>

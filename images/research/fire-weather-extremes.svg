@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" role="img" aria-labelledby="title desc">
+  <title id="title">Fire weather extremes placeholder</title>
+  <desc id="desc">A stylized climate and fire weather analysis graphic.</desc>
+  <rect width="960" height="540" fill="#f7f8f3"/>
+  <rect x="60" y="64" width="840" height="410" rx="28" fill="#ffffff" stroke="#d9ded5"/>
+  <path d="M120 354c38-72 81-82 130-46 42 31 73 20 104-28 35-56 80-60 126-12 44 46 78 45 112-1 44-60 101-55 170 15" fill="none" stroke="#be4b2f" stroke-width="18" stroke-linecap="round"/>
+  <path d="M120 386h720" stroke="#d9ded5" stroke-width="4"/>
+  <path d="M170 120v240M320 120v240M470 120v240M620 120v240M770 120v240" stroke="#edf1e9" stroke-width="4"/>
+  <circle cx="742" cy="152" r="56" fill="#f2c15f"/>
+  <path d="M214 174c38-51 82-51 120 0 31-27 63-27 94 0" fill="none" stroke="#2f668c" stroke-width="18" stroke-linecap="round"/>
+  <rect x="166" y="418" width="122" height="18" rx="9" fill="#275f4b"/>
+  <rect x="314" y="418" width="236" height="18" rx="9" fill="#d9ded5"/>
+</svg>

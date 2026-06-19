@@ -4,8 +4,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Wildfire Danger Index | Wildfire Risk and Earth System Laboratory</title>
-  <meta name="description" content="Interactive daily wildfire danger index map, including Burning Index, Fire Weather Index, and Wildland Fire Likelihood GeoTIFF products.">
+  <title>Remote Sensing of Fuels and Burned Areas | Wildfire Risk and Earth System Laboratory</title>
+  <meta name="description" content="Satellite-based analysis of vegetation condition, fuels, burned area, and post-fire recovery.">
   <meta name="generator" content="Hexo">
   <link rel="preconnect" href="https://unpkg.com">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
@@ -31,8 +31,6 @@
       --home-features-grid-template: repeat(3, minmax(0, 1fr));
     }
   </style>
-  
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
   
 </head>
 <body>
@@ -72,9 +70,9 @@
       
         <a href="/" class="">Home</a>
       
-        <a href="/research/" class="">Research</a>
+        <a href="/research/" class="active">Research</a>
       
-        <a href="/fire-danger/" class="active">Wildfire Danger Index</a>
+        <a href="/fire-danger/" class="">Wildfire Danger Index</a>
       
         <a href="/people/" class="">People</a>
       
@@ -85,50 +83,31 @@
 
   <main>
     <article class="page-content">
-  <h1 id="Wildfire-Danger-Index"><a href="#Wildfire-Danger-Index" class="headerlink" title="Wildfire Danger Index"></a>Wildfire Danger Index</h1><p>The portal displays daily laboratory-produced GeoTIFF layers for wildfire danger monitoring. Supported products include Burning Index, Fire Weather Index, Wildland Fire Likelihood, and related operational fire danger metrics.</p>
-<section class="index-dashboard" data-fire-danger-app>
-  <div class="control-panel" aria-label="Fire danger map controls">
-    <label>
-      <span>Index</span>
-      <select id="index-select"></select>
-    </label>
-    <label>
-      <span>Date</span>
-      <select id="date-select"></select>
-    </label>
-    <button id="download-current" class="button" type="button">Download GeoTIFF</button>
-  </div>
+  <h1 id="Remote-Sensing-of-Fuels-and-Burned-Areas"><a href="#Remote-Sensing-of-Fuels-and-Burned-Areas" class="headerlink" title="Remote Sensing of Fuels and Burned Areas"></a>Remote Sensing of Fuels and Burned Areas</h1><p class="profile-meta">Vegetation condition, fuel proxies, and post-fire recovery</p>
 
-  <div class="map-shell">
-    <div id="fire-map" aria-label="Wildfire danger map"></div>
-    <div class="legend" id="fire-legend" aria-live="polite"></div>
-  </div>
+<figure class="research-detail-media">
+  <img src="/images/research/remote-sensing-fuels.svg" alt="Remote sensing landscape and satellite observation graphic">
+  <figcaption>Replace this placeholder with satellite composites, fuel-condition maps, or burned-area examples.</figcaption>
+</figure>
 
-  <div class="status-grid">
-    <article>
-      <h2>Selected Layer</h2>
-      <dl id="layer-details">
-        <dt>Status</dt>
-        <dd>Loading available datasets...</dd>
-      </dl>
-    </article>
-    <article>
-      <h2>Data Update Notes</h2>
-      <p>Daily GeoTIFF files are published from <code>source/fire-danger-data/</code>. After adding new files, run <code>npm run data:update</code> and rebuild the site.</p>
-    </article>
-  </div>
-</section>
-
-<h2 id="Data-Policy"><a href="#Data-Policy" class="headerlink" title="Data Policy"></a>Data Policy</h2><p>Each raster layer should be accompanied by clear metadata: index name, production date, units, spatial extent, processing version, and contact point. For operational use, always check the timestamp and notes before making decisions.</p>
-<h2 id="Supported-Products"><a href="#Supported-Products" class="headerlink" title="Supported Products"></a>Supported Products</h2><ul>
-<li><strong>BI:</strong> Burning Index.</li>
-<li><strong>FWI:</strong> Fire Weather Index.</li>
-<li><strong>WFL:</strong> Wildland Fire Likelihood.</li>
-<li><strong>ERC:</strong> Energy Release Component.</li>
-<li><strong>SC:</strong> Spread Component.</li>
-<li><strong>IC:</strong> Ignition Component.</li>
+<p>Satellite observations help us characterize vegetation condition, fuel moisture proxies, burned area patterns, and post-fire recovery. We focus on workflows that can be reproduced across regions and updated as new imagery becomes available.</p>
+<h2 id="Core-Questions"><a href="#Core-Questions" class="headerlink" title="Core Questions"></a>Core Questions</h2><ul>
+<li>How do vegetation condition and fuel proxies relate to daily fire danger?</li>
+<li>Which remote-sensing products are most useful for operational monitoring?</li>
+<li>How can burned area and recovery patterns inform future risk assessment?</li>
 </ul>
-<p>Additional products can be added by placing GeoTIFF files in the data directory and including the desired <code>indexId</code> in either the file name or sidecar metadata. Recommended filenames include <code>BI_YYYY-MM-DD.tif</code>, <code>FWI_YYYY-MM-DD.tif</code>, and <code>WFL_YYYY-MM-DD.tif</code>.</p>
+<h2 id="Methods"><a href="#Methods" class="headerlink" title="Methods"></a>Methods</h2><ul>
+<li>Satellite data preprocessing and quality screening.</li>
+<li>Fuel and vegetation stress proxy development.</li>
+<li>Burned area mapping and post-fire recovery summaries.</li>
+<li>Raster integration with daily fire danger products.</li>
+</ul>
+<h2 id="Outputs"><a href="#Outputs" class="headerlink" title="Outputs"></a>Outputs</h2><ul>
+<li>Vegetation and fuel condition layers.</li>
+<li>Burned area and recovery summaries.</li>
+<li>Remote-sensing inputs for model evaluation.</li>
+</ul>
+<p><a class="back-link" href="/research/">Back to Research</a></p>
 
 </article>
 
@@ -157,14 +136,6 @@
     
   </footer>
 
-  
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-  
-    <script src="https://unpkg.com/georaster@1.6.0/dist/georaster.browser.bundle.min.js"></script>
-  
-    <script src="https://unpkg.com/georaster-layer-for-leaflet@3.10.0/dist/georaster-layer-for-leaflet.min.js"></script>
-  
-    <script src="/js/fire-danger.js"></script>
   
 </body>
 </html>
