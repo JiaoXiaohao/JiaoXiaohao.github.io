@@ -18,9 +18,19 @@
     details.innerHTML = rows.map(([label, value]) => `<dt>${label}</dt><dd>${value || 'Not provided'}</dd>`).join('');
   }
 
+  function formatNumber(value) {
+    if (value === null || value === undefined || value === '') return value;
+    const number = Number(value);
+    if (!Number.isFinite(number)) return value;
+    const absolute = Math.abs(number);
+    if (absolute > 0 && absolute < 0.01) return number.toExponential(2);
+    if (absolute >= 1000) return number.toExponential(2);
+    return Number(number.toFixed(3)).toString();
+  }
+
   function setLegend(dataset) {
-    const min = dataset.min ?? dataset.legend?.min ?? 'Low';
-    const max = dataset.max ?? dataset.legend?.max ?? 'High';
+    const min = formatNumber(dataset.min ?? dataset.legend?.min) ?? 'Low';
+    const max = formatNumber(dataset.max ?? dataset.legend?.max) ?? 'High';
     legend.innerHTML = `
       <strong>${dataset.indexName || dataset.title || 'Fire danger'}</strong>
       <div class="legend-bar" aria-hidden="true"></div>
@@ -137,7 +147,7 @@
         ['Index', dataset.indexName || dataset.indexId],
         ['Date', dataset.date],
         ['Units', dataset.units],
-        ['Range', `${min} to ${max}`],
+        ['Range', `${formatNumber(min)} to ${formatNumber(max)}`],
         ['Version', dataset.version],
         ['Produced', dataset.productionTime],
         ['Source', dataset.source],
