@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620" role="img" aria-labelledby="title desc">
+  <title id="title">Open data dashboard placeholder</title>
+  <desc id="desc">A homepage image placeholder showing a wildfire dashboard interface.</desc>
+  <rect width="900" height="620" fill="#f7f8f3"/>
+  <rect x="72" y="80" width="756" height="460" rx="28" fill="#ffffff" stroke="#d9ded5"/>
+  <rect x="110" y="128" width="202" height="338" rx="18" fill="#12221d"/>
+  <rect x="142" y="166" width="118" height="22" rx="11" fill="#f2c15f"/>
+  <rect x="142" y="218" width="136" height="14" rx="7" fill="#ffffff" opacity=".7"/>
+  <rect x="142" y="250" width="98" height="14" rx="7" fill="#ffffff" opacity=".7"/>
+  <rect x="142" y="318" width="120" height="84" rx="10" fill="#275f4b"/>
+  <rect x="352" y="128" width="352" height="126" rx="18" fill="#edf1e9"/>
+  <path d="M382 218c52-70 102-73 154-10 47-38 91-36 132 5" fill="none" stroke="#be4b2f" stroke-width="14" stroke-linecap="round"/>
+  <rect x="352" y="292" width="156" height="174" rx="18" fill="#e8eee6"/>
+  <rect x="548" y="292" width="156" height="174" rx="18" fill="#e8eee6"/>
+  <path d="M386 404h86M386 370h54" stroke="#2f668c" stroke-width="14" stroke-linecap="round"/>
+  <circle cx="626" cy="382" r="48" fill="#d49d32"/>
+  <path d="M606 382h40M626 362v40" stroke="#fff" stroke-width="12" stroke-linecap="round"/>
+</svg>

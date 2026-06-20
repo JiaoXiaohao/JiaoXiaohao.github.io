@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620" role="img" aria-labelledby="title desc">
+  <title id="title">Fire weather field placeholder</title>
+  <desc id="desc">A homepage image placeholder showing field weather observations.</desc>
+  <rect width="900" height="620" fill="#e9f0f2"/>
+  <rect x="0" y="368" width="900" height="252" fill="#dce7df"/>
+  <path d="M0 386c96-54 172-69 260-38 86 31 157 21 232-28 101-66 218-67 408 13v287H0Z" fill="#cdddcf"/>
+  <circle cx="690" cy="132" r="58" fill="#f2c15f"/>
+  <path d="M210 400V170" stroke="#275f4b" stroke-width="16" stroke-linecap="round"/>
+  <path d="M174 204h72M180 252h60M186 300h48" stroke="#275f4b" stroke-width="12" stroke-linecap="round"/>
+  <path d="M210 170l70 54-70 54-70-54Z" fill="#ffffff" stroke="#275f4b" stroke-width="10"/>
+  <path d="M382 246c34-46 74-46 108 0 28-24 57-24 85 0" fill="none" stroke="#2f668c" stroke-width="18" stroke-linecap="round"/>
+  <rect x="402" y="410" width="250" height="28" rx="14" fill="#275f4b"/>
+  <rect x="402" y="458" width="178" height="18" rx="9" fill="#607069" opacity=".45"/>
+</svg>

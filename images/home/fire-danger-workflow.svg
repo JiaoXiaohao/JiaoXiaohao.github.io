@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620" role="img" aria-labelledby="title desc">
+  <title id="title">Fire danger workflow placeholder</title>
+  <desc id="desc">A homepage image placeholder showing fire danger raster workflow.</desc>
+  <rect width="900" height="620" fill="#eef2eb"/>
+  <rect x="66" y="70" width="768" height="480" rx="30" fill="#ffffff" stroke="#d9ded5"/>
+  <path d="M120 412c112-84 207-102 300-58 78 37 141 28 210-36 54-50 101-68 158-55v150H120Z" fill="#dce7df"/>
+  <path d="M146 230h254v146H146z" fill="#edf1e9" stroke="#d9ded5"/>
+  <path d="M176 344l62-72 54 40 78-92 26 124H176Z" fill="#66a061"/>
+  <rect x="472" y="160" width="210" height="26" rx="13" fill="#275f4b"/>
+  <rect x="472" y="212" width="282" height="18" rx="9" fill="#d9ded5"/>
+  <rect x="472" y="246" width="230" height="18" rx="9" fill="#d9ded5"/>
+  <rect x="472" y="300" width="270" height="82" rx="14" fill="#12221d"/>
+  <path d="M498 342h56l28-28 36 48 24-22h74" fill="none" stroke="#f2c15f" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="720" cy="432" r="46" fill="#be4b2f"/>
+  <path d="M720 388c14 21 28 37 28 61 0 20-12 36-28 36s-28-16-28-36c0-16 8-27 19-42 1 13 6 21 13 27 7-15 3-28-4-46Z" fill="#f2c15f"/>
+</svg>
