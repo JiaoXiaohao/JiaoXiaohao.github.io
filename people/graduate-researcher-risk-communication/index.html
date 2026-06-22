@@ -28,6 +28,21 @@
       --page-accent: linear-gradient(180deg, rgba(39, 95, 75, 0.08), rgba(247, 248, 243, 0) 320px);
       --research-grid-template: repeat(2, minmax(0, 1fr));
       --people-grid-template: repeat(3, minmax(0, 1fr));
+      --home-showcase-min-height: min(680px, calc(100vh - 120px));
+      --home-showcase-mobile-min-height: 620px;
+      --home-welcome-padding-top: clamp(44px, 7vw, 78px);
+      --home-welcome-padding-bottom: 26px;
+      --home-welcome-to-metrics-gap: 0;
+      --home-metrics-margin-top: -34px;
+      --home-mobile-metrics-margin-top: 18px;
+      --home-section-padding-y: clamp(34px, 6vw, 76px);
+      --home-introduction-padding-top: clamp(34px, 5vw, 58px);
+      --home-introduction-column-gap: clamp(22px, 4vw, 44px);
+      --home-introduction-card-gap: 16px;
+      --home-workflow-margin-top: 0;
+      --home-workflow-margin-bottom: clamp(42px, 6vw, 80px);
+      --home-workflow-column-gap: 30px;
+      --home-markdown-padding-bottom: 20px;
     }
   </style>
   
@@ -84,22 +99,60 @@
 
   <main>
     <article class="page-content">
-  <h1 id="Graduate-Researcher"><a href="#Graduate-Researcher" class="headerlink" title="Graduate Researcher"></a>Graduate Researcher</h1><p class="profile-meta">Risk Communication and Uncertainty Visualization</p>
-
+  <section class="profile-hero-card">
+<img class="profile-photo" src="/images/people/person-placeholder.svg" alt="Graduate Researcher portrait">
+<div>
+<p class="profile-kicker">Graduate Researcher</p>
+<h1>Graduate Researcher</h1>
+<p class="profile-meta">Risk Communication and Uncertainty Visualization</p>
 <p>This graduate researcher focuses on how wildfire danger information can be communicated clearly to researchers, partners, and operational users.</p>
-<h2 id="Research-Interests"><a href="#Research-Interests" class="headerlink" title="Research Interests"></a>Research Interests</h2><ul>
+<ul class="profile-tags">
+<li>Risk Communication</li>
+<li>Uncertainty</li>
+<li>Decision Support</li>
+</ul>
+<nav class="social-links" aria-label="Profile links">
+<a href="mailto:graduate-risk-communication@example.org"><span class="social-icon social-icon--mail" aria-hidden="true"></span>Email</a>
+</nav>
+</div>
+</section>
+
+<div class="profile-layout">
+<div class="profile-main">
+<section class="profile-section">
+<h2>Research Interests</h2>
+<ul class="profile-list">
 <li>Wildfire risk communication.</li>
 <li>Uncertainty visualization.</li>
 <li>User-centered design for geospatial products.</li>
 <li>Evaluation of map interpretation and decision support.</li>
 </ul>
-<h2 id="Selected-Responsibilities"><a href="#Selected-Responsibilities" class="headerlink" title="Selected Responsibilities"></a>Selected Responsibilities</h2><ul>
+</section>
+
+<section class="profile-section">
+<h2>Selected Responsibilities</h2>
+<ul class="profile-list">
 <li>Review public-facing product descriptions.</li>
 <li>Develop communication guidelines for index maps.</li>
 <li>Support partner feedback sessions.</li>
 </ul>
-<h2 id="Contact"><a href="#Contact" class="headerlink" title="Contact"></a>Contact</h2><p>Email: <a href="mailto:&#x67;&#x72;&#97;&#x64;&#117;&#x61;&#116;&#101;&#45;&#114;&#105;&#x73;&#x6b;&#x2d;&#99;&#x6f;&#x6d;&#109;&#x75;&#x6e;&#x69;&#99;&#97;&#116;&#105;&#111;&#x6e;&#x40;&#101;&#x78;&#x61;&#x6d;&#x70;&#108;&#101;&#x2e;&#x6f;&#114;&#103;">graduate-risk-communication@example.org</a></p>
-<p><a href="/people/">Back to People</a></p>
+</section>
+</div>
+
+<aside class="profile-sidebar">
+<section class="profile-section">
+<h2>Contact</h2>
+<dl class="profile-contact-list">
+<div>
+<dt>Email</dt>
+<dd><a href="mailto:graduate-risk-communication@example.org">graduate-risk-communication@example.org</a></dd>
+</div>
+</dl>
+</section>
+
+<p><a class="back-link" href="/people/">Back to People</a></p>
+</aside>
+</div>
 
 </article>
 

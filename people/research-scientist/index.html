@@ -28,6 +28,21 @@
       --page-accent: linear-gradient(180deg, rgba(39, 95, 75, 0.08), rgba(247, 248, 243, 0) 320px);
       --research-grid-template: repeat(2, minmax(0, 1fr));
       --people-grid-template: repeat(3, minmax(0, 1fr));
+      --home-showcase-min-height: min(680px, calc(100vh - 120px));
+      --home-showcase-mobile-min-height: 620px;
+      --home-welcome-padding-top: clamp(44px, 7vw, 78px);
+      --home-welcome-padding-bottom: 26px;
+      --home-welcome-to-metrics-gap: 0;
+      --home-metrics-margin-top: -34px;
+      --home-mobile-metrics-margin-top: 18px;
+      --home-section-padding-y: clamp(34px, 6vw, 76px);
+      --home-introduction-padding-top: clamp(34px, 5vw, 58px);
+      --home-introduction-column-gap: clamp(22px, 4vw, 44px);
+      --home-introduction-card-gap: 16px;
+      --home-workflow-margin-top: 0;
+      --home-workflow-margin-bottom: clamp(42px, 6vw, 80px);
+      --home-workflow-column-gap: 30px;
+      --home-markdown-padding-bottom: 20px;
     }
   </style>
   
@@ -84,22 +99,60 @@
 
   <main>
     <article class="page-content">
-  <h1 id="Research-Scientist"><a href="#Research-Scientist" class="headerlink" title="Research Scientist"></a>Research Scientist</h1><p class="profile-meta">Operational Fire Danger Products</p>
-
+  <section class="profile-hero-card">
+<img class="profile-photo" src="/images/people/person-placeholder.svg" alt="Research Scientist portrait">
+<div>
+<p class="profile-kicker">Research Staff</p>
+<h1>Research Scientist</h1>
+<p class="profile-meta">Operational Fire Danger Products</p>
 <p>The Research Scientist develops and evaluates daily wildfire danger products, including Burning Index, Fire Weather Index, and related operational indicators.</p>
-<h2 id="Research-Interests"><a href="#Research-Interests" class="headerlink" title="Research Interests"></a>Research Interests</h2><ul>
+<ul class="profile-tags">
+<li>Fire Danger</li>
+<li>Model Evaluation</li>
+<li>Operational Data</li>
+</ul>
+<nav class="social-links" aria-label="Profile links">
+<a href="mailto:research-scientist@example.org"><span class="social-icon social-icon--mail" aria-hidden="true"></span>Email</a>
+</nav>
+</div>
+</section>
+
+<div class="profile-layout">
+<div class="profile-main">
+<section class="profile-section">
+<h2>Research Interests</h2>
+<ul class="profile-list">
 <li>Fire danger index production and validation.</li>
 <li>Model evaluation across regions and seasons.</li>
 <li>Processing pipelines for daily geospatial products.</li>
 <li>Uncertainty documentation for operational datasets.</li>
 </ul>
-<h2 id="Selected-Responsibilities"><a href="#Selected-Responsibilities" class="headerlink" title="Selected Responsibilities"></a>Selected Responsibilities</h2><ul>
+</section>
+
+<section class="profile-section">
+<h2>Selected Responsibilities</h2>
+<ul class="profile-list">
 <li>Maintain fire danger model workflows.</li>
 <li>Review daily product metadata and quality checks.</li>
 <li>Coordinate research outputs with the data engineering workflow.</li>
 </ul>
-<h2 id="Contact"><a href="#Contact" class="headerlink" title="Contact"></a>Contact</h2><p>Email: <a href="mailto:&#114;&#x65;&#x73;&#101;&#97;&#x72;&#99;&#104;&#x2d;&#115;&#99;&#105;&#101;&#x6e;&#116;&#105;&#x73;&#116;&#x40;&#x65;&#120;&#x61;&#x6d;&#x70;&#x6c;&#101;&#46;&#x6f;&#114;&#x67;">research-scientist@example.org</a></p>
-<p><a href="/people/">Back to People</a></p>
+</section>
+</div>
+
+<aside class="profile-sidebar">
+<section class="profile-section">
+<h2>Contact</h2>
+<dl class="profile-contact-list">
+<div>
+<dt>Email</dt>
+<dd><a href="mailto:research-scientist@example.org">research-scientist@example.org</a></dd>
+</div>
+</dl>
+</section>
+
+<p><a class="back-link" href="/people/">Back to People</a></p>
+</aside>
+</div>
 
 </article>
 

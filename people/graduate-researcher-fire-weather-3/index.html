@@ -28,6 +28,21 @@
       --page-accent: linear-gradient(180deg, rgba(39, 95, 75, 0.08), rgba(247, 248, 243, 0) 320px);
       --research-grid-template: repeat(2, minmax(0, 1fr));
       --people-grid-template: repeat(3, minmax(0, 1fr));
+      --home-showcase-min-height: min(680px, calc(100vh - 120px));
+      --home-showcase-mobile-min-height: 620px;
+      --home-welcome-padding-top: clamp(44px, 7vw, 78px);
+      --home-welcome-padding-bottom: 26px;
+      --home-welcome-to-metrics-gap: 0;
+      --home-metrics-margin-top: -34px;
+      --home-mobile-metrics-margin-top: 18px;
+      --home-section-padding-y: clamp(34px, 6vw, 76px);
+      --home-introduction-padding-top: clamp(34px, 5vw, 58px);
+      --home-introduction-column-gap: clamp(22px, 4vw, 44px);
+      --home-introduction-card-gap: 16px;
+      --home-workflow-margin-top: 0;
+      --home-workflow-margin-bottom: clamp(42px, 6vw, 80px);
+      --home-workflow-column-gap: 30px;
+      --home-markdown-padding-bottom: 20px;
     }
   </style>
   
@@ -84,25 +99,50 @@
 
   <main>
     <article class="page-content">
-  <h1 id="Graduate-Researcher"><a href="#Graduate-Researcher" class="headerlink" title="Graduate Researcher"></a>Graduate Researcher</h1><section class="profile-hero-card">
-  <img class="profile-photo" src="/images/people/person-placeholder.svg" alt="Graduate Researcher portrait">
-  <div>
-    <p class="profile-kicker">Graduate Researcher</p>
-    <h1>Graduate Researcher</h1>
-    <p class="profile-meta">Fuels and Vegetation</p>
-    <p>This graduate researcher links vegetation condition, fuels, and remotely sensed environmental signals to wildfire danger indices.</p>
-    <nav class="social-links" aria-label="Profile links">
-      <a href="mailto:graduate-fuels@example.org"><span class="social-icon">@</span>Email</a>
-    </nav>
-  </div>
+  <section class="profile-hero-card">
+<img class="profile-photo" src="/images/people/person-placeholder.svg" alt="Graduate Researcher portrait">
+<div>
+<p class="profile-kicker">Graduate Researcher</p>
+<h1>Graduate Researcher</h1>
+<p class="profile-meta">Fuels and Vegetation</p>
+<p>This graduate researcher links vegetation condition, fuels, and remotely sensed environmental signals to wildfire danger indices.</p>
+<ul class="profile-tags">
+<li>Fuels</li>
+<li>Vegetation</li>
+<li>Fire Danger</li>
+</ul>
+<nav class="social-links" aria-label="Profile links">
+<a href="mailto:graduate-fuels@example.org"><span class="social-icon social-icon--mail" aria-hidden="true"></span>Email</a>
+</nav>
+</div>
 </section>
 
-<h2 id="Research-Interests"><a href="#Research-Interests" class="headerlink" title="Research Interests"></a>Research Interests</h2><ul>
+<div class="profile-layout">
+<div class="profile-main">
+<section class="profile-section">
+<h2>Research Interests</h2>
+<ul class="profile-list">
 <li>Vegetation stress and fuel condition indicators.</li>
 <li>Remote sensing of fuels and landscape condition.</li>
 <li>Fire danger mapping and product evaluation.</li>
 </ul>
+</section>
+</div>
+
+<aside class="profile-sidebar">
+<section class="profile-section">
+<h2>Contact</h2>
+<dl class="profile-contact-list">
+<div>
+<dt>Email</dt>
+<dd><a href="mailto:graduate-fuels@example.org">graduate-fuels@example.org</a></dd>
+</div>
+</dl>
+</section>
+
 <p><a class="back-link" href="/people/">Back to People</a></p>
+</aside>
+</div>
 
 </article>
 

@@ -28,6 +28,21 @@
       --page-accent: linear-gradient(180deg, rgba(39, 95, 75, 0.08), rgba(247, 248, 243, 0) 320px);
       --research-grid-template: repeat(2, minmax(0, 1fr));
       --people-grid-template: repeat(3, minmax(0, 1fr));
+      --home-showcase-min-height: min(680px, calc(100vh - 120px));
+      --home-showcase-mobile-min-height: 620px;
+      --home-welcome-padding-top: clamp(44px, 7vw, 78px);
+      --home-welcome-padding-bottom: 26px;
+      --home-welcome-to-metrics-gap: 0;
+      --home-metrics-margin-top: -34px;
+      --home-mobile-metrics-margin-top: 18px;
+      --home-section-padding-y: clamp(34px, 6vw, 76px);
+      --home-introduction-padding-top: clamp(34px, 5vw, 58px);
+      --home-introduction-column-gap: clamp(22px, 4vw, 44px);
+      --home-introduction-card-gap: 16px;
+      --home-workflow-margin-top: 0;
+      --home-workflow-margin-bottom: clamp(42px, 6vw, 80px);
+      --home-workflow-column-gap: 30px;
+      --home-markdown-padding-bottom: 20px;
     }
   </style>
   
@@ -85,36 +100,76 @@
   <main>
     <article class="page-content">
   <section class="profile-hero-card">
-  <img class="profile-photo" src="/images/people/person-placeholder.svg" alt="Dr. Jia Yang portrait placeholder">
-  <div>
-    <p class="profile-kicker">Principal Investigator</p>
-    <h1>Dr. Jia Yang</h1>
-    <p class="profile-meta">Assistant Professor, Natural Resource Ecology and Management, Oklahoma State University</p>
-    <p>Dr. Yang studies ecosystem patterns and dynamics in response to climate change and wildfires. His research uses process-based ecosystem modeling, satellite remote sensing, and geospatial analysis to understand wildfire impacts, ecosystem biogeochemical cycles, and water resources availability.</p>
-    <nav class="social-links" aria-label="Profile links">
-      <a href="mailto:jia.yang11@okstate.edu"><span class="social-icon">@</span>Email</a>
-      <a target="_blank" rel="noopener" href="https://experts.okstate.edu/jia.yang11"><span class="social-icon">OSU</span>OSU Experts</a>
-      <a target="_blank" rel="noopener" href="https://scholar.google.com/citations?hl=en&user=bTuQtA8AAAAJ"><span class="social-icon">GS</span>Google Scholar</a>
-    </nav>
-  </div>
+<img class="profile-photo" src="/images/people/person-placeholder.svg" alt="Dr. Jia Yang portrait placeholder">
+<div>
+<p class="profile-kicker">Principal Investigator</p>
+<h1>Dr. Jia Yang</h1>
+<p class="profile-meta">Assistant Professor, Natural Resource Ecology and Management, Oklahoma State University</p>
+<p>Dr. Yang studies ecosystem patterns and dynamics in response to climate change and wildfires. His work combines process-based ecosystem modeling, satellite remote sensing, and geospatial analysis to understand wildfire impacts, ecosystem biogeochemical cycles, and water resources availability.</p>
+<ul class="profile-tags">
+<li>Ecosystem Modeling</li>
+<li>Remote Sensing</li>
+<li>Wildfire Impacts</li>
+<li>Water Resources</li>
+</ul>
+<nav class="social-links" aria-label="Profile links">
+<a href="mailto:jia.yang11@okstate.edu"><span class="social-icon social-icon--mail" aria-hidden="true"></span>Email</a>
+<a target="_blank" rel="noopener" href="https://experts.okstate.edu/jia.yang11"><span class="social-icon">OSU</span>OSU Experts</a>
+<a target="_blank" rel="noopener" href="https://scholar.google.com/citations?hl=en&user=bTuQtA8AAAAJ"><img class="social-icon-img" src="https://cdn.simpleicons.org/googlescholar/4285F4" alt="" loading="lazy">Google Scholar</a>
+</nav>
+</div>
 </section>
 
-<h2 id="Research-Interests"><a href="#Research-Interests" class="headerlink" title="Research Interests"></a>Research Interests</h2><ul>
+<div class="profile-layout">
+<div class="profile-main">
+<section class="profile-section">
+<h2>Research Interests</h2>
+<ul class="profile-list">
 <li>Wildfire impacts and fire danger under changing climate.</li>
 <li>Ecosystem biogeochemical cycles and carbon-water interactions.</li>
 <li>Water resources availability and ecohydrology.</li>
 <li>Process-based ecosystem modeling.</li>
 <li>Satellite remote sensing, GIS, and geospatial data modeling.</li>
 </ul>
-<h2 id="Appointment"><a href="#Appointment" class="headerlink" title="Appointment"></a>Appointment</h2><p>Dr. Yang is an Assistant Professor in the Department of Natural Resource Ecology and Management at Oklahoma State University. His OSU appointment began on January 1, 2022.</p>
-<h2 id="Education-and-Previous-Positions"><a href="#Education-and-Previous-Positions" class="headerlink" title="Education and Previous Positions"></a>Education and Previous Positions</h2><ul>
+</section>
+
+<section class="profile-section">
+<h2>Education and Previous Positions</h2>
+<ul class="profile-list">
 <li>Assistant Professor, Mississippi State University, Department of Forestry, 2018-2021.</li>
 <li>Research Fellow, Auburn University, School of Forestry and Wildlife Sciences, 2015-2018.</li>
 <li>Ph.D. in Forestry, Auburn University.</li>
 <li>B.S. in Biology and Applied Meteorology, China Agricultural University.</li>
 </ul>
-<h2 id="Contact"><a href="#Contact" class="headerlink" title="Contact"></a>Contact</h2><p><strong>Email:</strong> <a href="mailto:jia.yang11@okstate.edu">jia.yang11@okstate.edu</a><br><strong>Phone:</strong> (405) 744-9429<br><strong>Office:</strong> 008 Ag Hall, Stillwater, OK 74078</p>
+</section>
+</div>
+
+<aside class="profile-sidebar">
+<section class="profile-section">
+<h2>Contact</h2>
+<dl class="profile-contact-list">
+<div>
+<dt>Email</dt>
+<dd><a href="mailto:jia.yang11@okstate.edu">jia.yang11@okstate.edu</a></dd>
+</div>
+<div>
+<dt>Phone</dt>
+<dd>(405) 744-9429</dd>
+</div>
+<div>
+<dt>Office</dt>
+<dd>008 Ag Hall, Stillwater, OK 74078</dd>
+</div>
+<div>
+<dt>OSU Appointment</dt>
+<dd>January 1, 2022</dd>
+</div>
+</dl>
+</section>
+
 <p><a class="back-link" href="/people/">Back to People</a></p>
+</aside>
+</div>
 
 </article>
 

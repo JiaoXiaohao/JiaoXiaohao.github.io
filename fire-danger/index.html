@@ -28,6 +28,21 @@
       --page-accent: linear-gradient(180deg, rgba(39, 95, 75, 0.08), rgba(247, 248, 243, 0) 320px);
       --research-grid-template: repeat(2, minmax(0, 1fr));
       --people-grid-template: repeat(3, minmax(0, 1fr));
+      --home-showcase-min-height: min(680px, calc(100vh - 120px));
+      --home-showcase-mobile-min-height: 620px;
+      --home-welcome-padding-top: clamp(44px, 7vw, 78px);
+      --home-welcome-padding-bottom: 26px;
+      --home-welcome-to-metrics-gap: 0;
+      --home-metrics-margin-top: -34px;
+      --home-mobile-metrics-margin-top: 18px;
+      --home-section-padding-y: clamp(34px, 6vw, 76px);
+      --home-introduction-padding-top: clamp(34px, 5vw, 58px);
+      --home-introduction-column-gap: clamp(22px, 4vw, 44px);
+      --home-introduction-card-gap: 16px;
+      --home-workflow-margin-top: 0;
+      --home-workflow-margin-bottom: clamp(42px, 6vw, 80px);
+      --home-workflow-column-gap: 30px;
+      --home-markdown-padding-bottom: 20px;
     }
   </style>
   
@@ -86,7 +101,11 @@
 
   <main>
     <article class="page-content">
-  <h1 id="Wildfire-Danger-Index"><a href="#Wildfire-Danger-Index" class="headerlink" title="Wildfire Danger Index"></a>Wildfire Danger Index</h1><p>The portal displays daily laboratory-produced GeoTIFF layers for wildfire danger monitoring. Supported products include Burning Index, Fire Weather Index, Wildland Fire Likelihood, and related operational fire danger metrics.</p>
+  <h1 id="Wildfire-Danger-Index"><a href="#Wildfire-Danger-Index" class="headerlink" title="Wildfire Danger Index"></a>Wildfire Danger Index</h1><p>Under construction. Please check back soon for the interactive wildfire danger index map, featuring daily GeoTIFF layers for Burning Index, Fire Weather Index, Wildland Fire Likelihood, and more.</p>
+<!-- # Wildfire Danger Index
+
+The portal displays daily laboratory-produced GeoTIFF layers for wildfire danger monitoring. Supported products include Burning Index, Fire Weather Index, Wildland Fire Likelihood, and related operational fire danger metrics.
+
 <section class="index-dashboard" data-fire-danger-app>
   <div class="control-panel" aria-label="Fire danger map controls">
     <label>
@@ -120,16 +139,20 @@
   </div>
 </section>
 
-<h2 id="Data-Policy"><a href="#Data-Policy" class="headerlink" title="Data Policy"></a>Data Policy</h2><p>Each raster layer should be accompanied by clear metadata: index name, production date, units, spatial extent, processing version, and contact point. For operational use, always check the timestamp and notes before making decisions.</p>
-<h2 id="Supported-Products"><a href="#Supported-Products" class="headerlink" title="Supported Products"></a>Supported Products</h2><ul>
-<li><strong>BI:</strong> Burning Index.</li>
-<li><strong>FWI:</strong> Fire Weather Index.</li>
-<li><strong>WFL:</strong> Wildland Fire Likelihood.</li>
-<li><strong>ERC:</strong> Energy Release Component.</li>
-<li><strong>SC:</strong> Spread Component.</li>
-<li><strong>IC:</strong> Ignition Component.</li>
-</ul>
-<p>Additional products can be added by placing GeoTIFF files in the data directory and including the desired <code>indexId</code> in either the file name or sidecar metadata. Recommended filenames include <code>BI_YYYY-MM-DD.tif</code>, <code>FWI_YYYY-MM-DD.tif</code>, and <code>WFL_YYYY-MM-DD.tif</code>.</p>
+## Data Policy
+
+Each raster layer should be accompanied by clear metadata: index name, production date, units, spatial extent, processing version, and contact point. For operational use, always check the timestamp and notes before making decisions.
+
+## Supported Products
+
+- **BI:** Burning Index.
+- **FWI:** Fire Weather Index.
+- **WFL:** Wildland Fire Likelihood.
+- **ERC:** Energy Release Component.
+- **SC:** Spread Component.
+- **IC:** Ignition Component.
+
+Additional products can be added by placing GeoTIFF files in the data directory and including the desired `indexId` in either the file name or sidecar metadata. Recommended filenames include `BI_YYYY-MM-DD.tif`, `FWI_YYYY-MM-DD.tif`, and `WFL_YYYY-MM-DD.tif`. -->
 
 </article>
 

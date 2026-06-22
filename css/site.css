@@ -219,7 +219,7 @@ main {
 
 .home-showcase {
   position: relative;
-  min-height: min(680px, calc(100vh - 120px));
+  min-height: var(--home-showcase-min-height, min(680px, calc(100vh - 120px)));
   overflow: hidden;
   background: var(--showcase-bg, #000);
   color: #fff;
@@ -365,7 +365,7 @@ main {
 .home-welcome {
   width: min(760px, calc(100% - 36px));
   margin: 0 auto;
-  padding: clamp(44px, 7vw, 78px) 0 26px;
+  padding: var(--home-welcome-padding-top, clamp(44px, 7vw, 78px)) 0 var(--home-welcome-padding-bottom, 26px);
   text-align: center;
 }
 
@@ -406,7 +406,7 @@ main {
 }
 
 .home-welcome + .metric-strip {
-  margin-top: 0;
+  margin-top: var(--home-welcome-to-metrics-gap, 0);
 }
 
 .hero {
@@ -519,7 +519,7 @@ main {
   grid-template-columns: repeat(auto-fit, minmax(min(220px, 100%), 1fr));
   gap: 1px;
   width: min(1120px, calc(100% - 36px));
-  margin: -34px auto 0;
+  margin: var(--home-metrics-margin-top, -34px) auto 0;
   position: relative;
   z-index: 5;
   overflow: hidden;
@@ -598,15 +598,25 @@ main {
 }
 
 .home-content {
-  padding-bottom: 20px;
+  padding-top: var(--home-section-padding-y, clamp(34px, 6vw, 76px));
+  padding-bottom: var(--home-markdown-padding-bottom, 20px);
 }
 
 .home-introduction {
   display: grid;
   grid-template-columns: minmax(0, 0.9fr) minmax(280px, 1.1fr);
-  gap: clamp(22px, 4vw, 44px);
+  gap: var(--home-introduction-column-gap, clamp(22px, 4vw, 44px));
   align-items: start;
-  padding-top: clamp(34px, 5vw, 58px);
+  padding-top: var(--home-introduction-padding-top, clamp(34px, 5vw, 58px));
+}
+
+.home-introduction,
+.home-news {
+  padding-bottom: var(--home-section-padding-y, clamp(34px, 6vw, 76px));
+}
+
+.home-news {
+  padding-top: var(--home-section-padding-y, clamp(34px, 6vw, 76px));
 }
 
 .home-introduction h2 {
@@ -620,7 +630,7 @@ main {
 
 .home-introduction-details {
   display: grid;
-  gap: 16px;
+  gap: var(--home-introduction-card-gap, 16px);
 }
 
 .home-introduction-details article {
@@ -873,10 +883,10 @@ main {
 .workflow-panel {
   display: grid;
   grid-template-columns: minmax(0, 0.95fr) minmax(280px, 1.05fr);
-  gap: 30px;
+  gap: var(--home-workflow-column-gap, 30px);
   align-items: center;
-  margin-top: 0;
-  margin-bottom: clamp(42px, 6vw, 80px);
+  margin-top: var(--home-workflow-margin-top, 0);
+  margin-bottom: var(--home-workflow-margin-bottom, clamp(42px, 6vw, 80px));
   padding: clamp(24px, 4vw, 36px);
   border: 1px solid var(--line);
   border-radius: 8px;
@@ -1026,14 +1036,16 @@ main {
 
 .profile-hero-card {
   display: grid;
-  grid-template-columns: 116px minmax(0, 1fr);
-  gap: 24px;
+  grid-template-columns: 132px minmax(0, 1fr);
+  gap: clamp(20px, 4vw, 34px);
   align-items: start;
-  margin-bottom: 34px;
-  padding: clamp(22px, 4vw, 34px);
+  margin-bottom: clamp(24px, 5vw, 46px);
+  padding: clamp(22px, 4vw, 38px);
   border: 1px solid var(--line);
   border-radius: 8px;
-  background: linear-gradient(180deg, #fff, #f8faf5);
+  background:
+    linear-gradient(135deg, rgba(39, 95, 75, 0.08), rgba(212, 157, 50, 0.08)),
+    var(--surface);
   box-shadow: var(--soft-shadow);
 }
 
@@ -1059,8 +1071,8 @@ main {
 }
 
 .profile-photo {
-  width: 112px;
-  height: 112px;
+  width: 124px;
+  height: 140px;
   border: 1px solid var(--line);
   border-radius: 8px;
   background: #e8eee6;
@@ -1069,11 +1081,30 @@ main {
 
 .profile-kicker {
   margin: 0 0 8px !important;
-  color: var(--muted);
+  color: var(--accent-dark);
   font-size: 0.78rem !important;
   font-weight: 900;
   letter-spacing: 0.12em;
   text-transform: uppercase;
+}
+
+.profile-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 18px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.profile-tags li {
+  padding: 6px 10px;
+  border: 1px solid rgba(39, 95, 75, 0.16);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.72);
+  color: var(--green);
+  font-size: 0.78rem;
+  font-weight: 800;
 }
 
 .social-links {
@@ -1113,6 +1144,106 @@ main {
   color: var(--green);
   font-size: 0.68rem;
   font-weight: 900;
+  overflow: hidden;
+}
+
+.social-icon-img,
+.social-icon-svg {
+  width: 18px;
+  height: 18px;
+  flex: 0 0 auto;
+}
+
+.social-icon--mail::before {
+  content: "";
+  width: 16px;
+  height: 16px;
+  background: currentColor;
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect width='20' height='16' x='2' y='4' rx='2'/%3E%3Cpath d='m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7'/%3E%3C/svg%3E") center / contain no-repeat;
+}
+
+.profile-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(260px, 0.42fr);
+  gap: clamp(20px, 4vw, 34px);
+  align-items: start;
+}
+
+.profile-main,
+.profile-sidebar,
+.profile-section {
+  display: grid;
+  gap: 16px;
+}
+
+.profile-section {
+  padding: clamp(18px, 3vw, 24px);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--surface);
+  box-shadow: 0 8px 22px rgba(42, 55, 48, 0.05);
+}
+
+.profile-section h2,
+.profile-section h3,
+.profile-section p {
+  margin: 0;
+}
+
+.profile-list {
+  display: grid;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.profile-list li {
+  position: relative;
+  padding-left: 18px;
+  color: var(--muted);
+}
+
+.profile-list li::before {
+  content: "";
+  position: absolute;
+  top: 0.68em;
+  left: 0;
+  width: 7px;
+  height: 7px;
+  border-radius: 999px;
+  background: var(--accent);
+}
+
+.profile-contact-list {
+  display: grid;
+  gap: 10px;
+  margin: 0;
+}
+
+.profile-contact-list div {
+  display: grid;
+  gap: 2px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--line);
+}
+
+.profile-contact-list div:last-child {
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+
+.profile-contact-list dt {
+  color: var(--muted);
+  font-size: 0.78rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.profile-contact-list dd {
+  margin: 0;
+  color: var(--text);
+  font-weight: 700;
 }
 
 .back-link {
@@ -1295,8 +1426,12 @@ main {
     grid-template-columns: 1fr;
   }
 
+  .profile-layout {
+    grid-template-columns: 1fr;
+  }
+
   .home-showcase {
-    min-height: 620px;
+    min-height: var(--home-showcase-mobile-min-height, 620px);
   }
 
   .home-showcase-stage {
@@ -1337,7 +1472,7 @@ main {
   }
 
   .metric-strip {
-    margin-top: 18px;
+    margin-top: var(--home-mobile-metrics-margin-top, 18px);
   }
 
   .metric-strip article {
