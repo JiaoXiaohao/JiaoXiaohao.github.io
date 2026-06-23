@@ -1,0 +1,40 @@
+{
+  "title": "Wildland Fire Likelihood, 2023-08-07",
+  "indexId": "WFL",
+  "indexName": "Wildland Fire Likelihood",
+  "date": "2023-08-07",
+  "units": "probability",
+  "displayValueType": "probability",
+  "displayUnits": "Probability (%)",
+  "displayScale": 100,
+  "displaySuffix": "%",
+  "min": 0.00212695705704391,
+  "max": 0.9820414781570435,
+  "version": "v1.0",
+  "productionTime": "2026-06-23T04:08:25.238692Z",
+  "source": "Daily laboratory fire danger processing pipeline",
+  "contact": "firedata@example.org",
+  "description": "Spatial likelihood of wildland fire occurrence or ignition under modeled conditions.",
+  "filename": "WFL_2023-08-07.tif",
+  "file": "/fire-danger-data/WFL_2023-08-07.tif",
+  "rawFile": "C:/Users/27456/OneDrive/文档/Website/source/fire-danger-data/WFL_2023-08-07.tif",
+  "band": 1,
+  "width": 1767,
+  "height": 1561,
+  "bounds": [
+    -110.44292283466861,
+    25.49730631573501,
+    -92.46269434916643,
+    41.38136781311413
+  ],
+  "crs": "EPSG:4326",
+  "targetCrs": "EPSG:4326",
+  "sourceCrs": "EPSG:4326",
+  "resampling": "bilinear",
+  "resolution": [
+    0.010175567903510006,
+    0.010175567903510008
+  ],
+  "noDataValue": -9999,
+  "dataType": "float32"
+}

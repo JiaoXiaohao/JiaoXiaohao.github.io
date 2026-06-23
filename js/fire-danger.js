@@ -7,6 +7,11 @@
   const details = document.getElementById('layer-details');
   const legend = document.getElementById('fire-legend');
   const downloadButton = document.getElementById('download-current');
+  const display = window.FireDangerDisplay || {
+    formatValue: (value) => value,
+    formatRange: (min, max) => `${min} to ${max}`,
+    unitsLabel: (dataset) => dataset.units || 'Not provided'
+  };
 
   const palette = ['#2f7bbd', '#6fba5b', '#f0d34c', '#e58235', '#b2182b'];
   let map;
@@ -19,12 +24,14 @@
   }
 
   function setLegend(dataset) {
-    const min = dataset.min ?? dataset.legend?.min ?? 'Low';
-    const max = dataset.max ?? dataset.legend?.max ?? 'High';
+    const min = dataset.min ?? dataset.legend?.min;
+    const max = dataset.max ?? dataset.legend?.max;
+    const minLabel = min === undefined ? 'Low' : display.formatValue(min, dataset);
+    const maxLabel = max === undefined ? 'High' : display.formatValue(max, dataset);
     legend.innerHTML = `
       <strong>${dataset.indexName || dataset.title || 'Fire danger'}</strong>
       <div class="legend-bar" aria-hidden="true"></div>
-      <div class="legend-scale"><span>${min}</span><span>${max}</span></div>
+      <div class="legend-scale"><span>${minLabel}</span><span>${maxLabel}</span></div>
     `;
   }
 
@@ -56,6 +63,11 @@
     return manifest.datasets
       .filter((dataset) => dataset.indexId === indexId)
       .sort((a, b) => String(b.date || '').localeCompare(String(a.date || '')));
+  }
+
+  function isLeafletCompatibleCrs(dataset) {
+    const crs = String(dataset.targetCrs || dataset.crs || '').toUpperCase();
+    return crs === 'EPSG:4326' || crs.includes('WGS 84') || crs.includes('WGS84');
   }
 
   function populateIndices() {
@@ -105,6 +117,12 @@
     setLegend(dataset);
 
     try {
+      if (!isLeafletCompatibleCrs(dataset)) {
+        throw new Error(
+          `Raster CRS is ${dataset.crs || dataset.targetCrs || 'unknown'}, but Leaflet display expects EPSG:4326. Run npm run data:update to normalize the GeoTIFF before publishing.`
+        );
+      }
+
       const mapInstance = ensureMap();
       const response = await fetch(dataset.file);
       if (!response.ok) throw new Error(`HTTP ${response.status}`);
@@ -136,8 +154,8 @@
         ['Title', dataset.title],
         ['Index', dataset.indexName || dataset.indexId],
         ['Date', dataset.date],
-        ['Units', dataset.units],
-        ['Range', `${min} to ${max}`],
+        ['Units', display.unitsLabel(dataset)],
+        ['Range', display.formatRange(min, max, dataset)],
         ['Version', dataset.version],
         ['Produced', dataset.productionTime],
         ['Source', dataset.source],
