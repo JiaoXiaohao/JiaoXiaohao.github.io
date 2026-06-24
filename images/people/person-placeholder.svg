@@ -1,9 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 320" role="img" aria-labelledby="title desc">
-  <title id="title">Person photo placeholder</title>
-  <desc id="desc">A neutral portrait placeholder for laboratory member pages.</desc>
-  <rect width="320" height="320" rx="24" fill="#e8eee6"/>
-  <circle cx="160" cy="116" r="54" fill="#275f4b"/>
-  <path d="M72 278c10-61 43-94 88-94s78 33 88 94H72Z" fill="#275f4b"/>
-  <path d="M48 256c45-21 82-23 121-6 39 17 72 15 103-2v32H48v-24Z" fill="#d49d32" opacity=".8"/>
-  <text x="160" y="299" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="800" fill="#607069">Replace with photo</text>
-</svg>
