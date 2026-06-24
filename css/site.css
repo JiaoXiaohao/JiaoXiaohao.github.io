@@ -1147,19 +1147,46 @@ main {
   overflow: hidden;
 }
 
-.social-icon-img,
-.social-icon-svg {
-  width: 18px;
-  height: 18px;
-  flex: 0 0 auto;
+.social-icon--icon::before {
+  content: "";
+  width: 17px;
+  height: 17px;
+  background: currentColor;
+  -webkit-mask: var(--social-icon-url) center / contain no-repeat;
+  mask: var(--social-icon-url) center / contain no-repeat;
 }
 
-.social-icon--mail::before {
-  content: "";
-  width: 16px;
-  height: 16px;
-  background: currentColor;
-  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect width='20' height='16' x='2' y='4' rx='2'/%3E%3Cpath d='m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7'/%3E%3C/svg%3E") center / contain no-repeat;
+.social-icon--mail {
+  --social-icon-url: url("https://api.iconify.design/lucide:mail.svg");
+}
+
+.social-icon--phone {
+  --social-icon-url: url("https://api.iconify.design/lucide:phone.svg");
+}
+
+.social-icon--office {
+  --social-icon-url: url("https://api.iconify.design/lucide:map-pin.svg");
+}
+
+.social-icon--calendar {
+  --social-icon-url: url("https://api.iconify.design/lucide:calendar-days.svg");
+}
+
+.social-icon--external {
+  --social-icon-url: url("https://api.iconify.design/lucide:external-link.svg");
+}
+
+.social-icon--institution {
+  --social-icon-url: url("https://api.iconify.design/lucide:building-2.svg");
+}
+
+.social-icon--scholar::before {
+  width: 18px;
+  height: 18px;
+}
+
+.social-icon--scholar {
+  --social-icon-url: url("https://api.iconify.design/simple-icons:googlescholar.svg");
 }
 
 .profile-layout {
@@ -1234,10 +1261,24 @@ main {
 }
 
 .profile-contact-list dt {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
   color: var(--muted);
   font-size: 0.78rem;
   font-weight: 900;
   text-transform: uppercase;
+}
+
+.profile-contact-list .social-icon {
+  width: 22px;
+  height: 22px;
+  border-radius: 5px;
+}
+
+.profile-contact-list .social-icon::before {
+  width: 15px;
+  height: 15px;
 }
 
 .profile-contact-list dd {
