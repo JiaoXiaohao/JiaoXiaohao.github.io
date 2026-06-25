@@ -15,6 +15,9 @@
   --page-accent: linear-gradient(180deg, rgba(39, 95, 75, 0.08), rgba(247, 248, 243, 0) 320px);
   --shadow: 0 20px 50px rgba(42, 55, 48, 0.12);
   --soft-shadow: 0 12px 36px rgba(42, 55, 48, 0.08);
+  --module-space-y: clamp(28px, 4vw, 44px);
+  --module-space-tight: clamp(18px, 3vw, 30px);
+  --module-grid-gap: 18px;
   font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
 
@@ -560,7 +563,7 @@ main {
 }
 
 .page-content {
-  padding: clamp(34px, 6vw, 76px) 0;
+  padding: var(--module-space-y) 0;
 }
 
 .page-content h1 {
@@ -571,13 +574,13 @@ main {
 }
 
 .page-content h2 {
-  margin-top: 42px;
+  margin-top: var(--module-space-y);
   font-size: 1.55rem;
   line-height: 1.25;
 }
 
 .page-content h3 {
-  margin-top: 26px;
+  margin-top: var(--module-space-tight);
   color: var(--green);
   font-size: 1.14rem;
 }
@@ -598,7 +601,7 @@ main {
 }
 
 .home-content {
-  padding-top: var(--home-section-padding-y, clamp(34px, 6vw, 76px));
+  padding-top: var(--home-section-padding-y, var(--module-space-y));
   padding-bottom: var(--home-markdown-padding-bottom, 20px);
 }
 
@@ -607,16 +610,20 @@ main {
   grid-template-columns: minmax(0, 0.9fr) minmax(280px, 1.1fr);
   gap: var(--home-introduction-column-gap, clamp(22px, 4vw, 44px));
   align-items: start;
-  padding-top: var(--home-introduction-padding-top, clamp(34px, 5vw, 58px));
+  padding-top: var(--home-introduction-padding-top, var(--module-space-y));
 }
 
 .home-introduction,
 .home-news {
-  padding-bottom: var(--home-section-padding-y, clamp(34px, 6vw, 76px));
+  padding-bottom: var(--home-section-padding-y, var(--module-space-y));
 }
 
 .home-news {
-  padding-top: var(--home-section-padding-y, clamp(34px, 6vw, 76px));
+  padding-top: var(--home-section-padding-y, var(--module-space-y));
+}
+
+.home-introduction + .home-news {
+  padding-top: 0;
 }
 
 .home-introduction h2 {
@@ -665,8 +672,8 @@ main {
 .research-showcase {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(260px, 100%), 1fr));
-  gap: 16px;
-  margin: 34px 0;
+  gap: var(--module-grid-gap);
+  margin: var(--module-space-tight) 0;
 }
 
 .research-showcase article,
@@ -727,8 +734,8 @@ main {
 .research-grid {
   display: grid;
   grid-template-columns: var(--research-grid-template, repeat(auto-fit, minmax(min(270px, 100%), 1fr)));
-  gap: 18px;
-  margin: 28px 0 42px;
+  gap: var(--module-grid-gap);
+  margin: var(--module-space-tight) 0 var(--module-space-y);
 }
 
 .research-card {
@@ -811,7 +818,7 @@ main {
 }
 
 .research-detail-media {
-  margin: 24px 0 30px;
+  margin: var(--module-space-tight) 0;
   overflow: hidden;
   border: 1px solid var(--line);
   border-radius: 8px;
@@ -832,8 +839,8 @@ main {
 
 .publication-list {
   display: grid;
-  gap: 16px;
-  margin: 24px 0 38px;
+  gap: var(--module-grid-gap);
+  margin: var(--module-space-tight) 0 var(--module-space-y);
 }
 
 .publication-item {
@@ -886,7 +893,7 @@ main {
   gap: var(--home-workflow-column-gap, 30px);
   align-items: center;
   margin-top: var(--home-workflow-margin-top, 0);
-  margin-bottom: var(--home-workflow-margin-bottom, clamp(42px, 6vw, 80px));
+  margin-bottom: var(--home-workflow-margin-bottom, var(--module-space-y));
   padding: clamp(24px, 4vw, 36px);
   border: 1px solid var(--line);
   border-radius: 8px;
@@ -946,8 +953,8 @@ main {
 .people-grid {
   display: grid;
   grid-template-columns: var(--people-grid-template, repeat(auto-fit, minmax(240px, 1fr)));
-  gap: 16px;
-  margin: 18px 0 28px;
+  gap: var(--module-grid-gap);
+  margin: var(--module-space-tight) 0 var(--module-space-y);
 }
 
 .person-card {
@@ -1039,7 +1046,7 @@ main {
   grid-template-columns: 132px minmax(0, 1fr);
   gap: clamp(20px, 4vw, 34px);
   align-items: start;
-  margin-bottom: clamp(24px, 5vw, 46px);
+  margin-bottom: var(--module-space-y);
   padding: clamp(22px, 4vw, 38px);
   border: 1px solid var(--line);
   border-radius: 8px;
@@ -1192,7 +1199,7 @@ main {
 .profile-layout {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(260px, 0.42fr);
-  gap: clamp(20px, 4vw, 34px);
+  gap: var(--module-grid-gap);
   align-items: start;
 }
 
@@ -1310,8 +1317,8 @@ main {
 
 .index-dashboard {
   display: grid;
-  gap: 18px;
-  margin: 28px 0 36px;
+  gap: var(--module-grid-gap);
+  margin: var(--module-space-tight) 0 var(--module-space-y);
 }
 
 .control-panel {
