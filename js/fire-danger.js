@@ -41,7 +41,7 @@
     map = L.map('fire-map', {
       zoomControl: true,
       scrollWheelZoom: true
-    }).setView([35, 105], 4);
+    }).setView([39, -98], 4);
 
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
       maxZoom: 12,
