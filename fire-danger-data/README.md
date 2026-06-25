@@ -1,30 +1,46 @@
-# Fire Danger Data Folder
+# Prepared Fire Danger Data Folder
 
-Put daily GeoTIFF files in this folder. The files will be copied into the generated static site and served from `/fire-danger-data/`.
-
-Recommended filenames:
+This folder stores website-ready fire danger rasters and metadata. Hexo copies these files into the generated static site and serves them from:
 
 ```text
-BI_2026-06-12.tif
-FWI_2026-06-12.tif
-WFL_2026-06-12.tif
-ERC_2026-06-12.tif
-SC_2026-06-12.tif
+/fire-danger-data/
 ```
 
-Optional sidecar metadata can use the same base name:
+Normal workflow:
 
 ```text
-BI_2026-06-12.json
+raw/*.tif
+  -> npm run data:update
+  -> source/fire-danger-data/*.tif
+  -> source/fire-danger-data/*.json
+  -> source/fire-danger-data/manifest.json
 ```
 
-Use `metadata-template.json` as a starting point for sidecar files.
+Use `raw/` for new source rasters. Use this folder for prepared outputs that the website map can read.
 
-Then run:
+## Files In This Folder
+
+- `*.tif`: website-ready GeoTIFF rasters, normalized to a Leaflet-compatible coordinate system.
+- `*.json`: sidecar metadata for each raster.
+- `manifest.json`: runtime dataset index read by the Fire Danger Index page.
+- `metadata-template.json`: example metadata fields for maintainers.
+
+Do not rename `manifest.json`; the public map page loads it at runtime.
+
+## Updating Data
+
+From the project root:
 
 ```bash
 npm run data:update
 npm run build
 ```
 
-Do not rename `manifest.json`; it is read by the public map page.
+For stricter production validation:
+
+```bash
+npm run data:update:strict
+npm run build
+```
+
+See `docs/FIRE_DANGER_DATA.md` for sidecar JSON, CRS, units, display rules, and troubleshooting details.
