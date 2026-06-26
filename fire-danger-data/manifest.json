@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-26T23:32:17.994Z",
+  "generatedAt": "2026-06-26T23:35:03.703Z",
   "datasetRoot": "/fire-danger-data/",
   "indices": [
     {
@@ -78,7 +78,7 @@
       "min": 0.00212695705704391,
       "max": 0.9820414781570435,
       "version": "v1.0",
-      "productionTime": "2026-06-26T23:32:16.187961Z",
+      "productionTime": "2026-06-26T23:35:01.845264Z",
       "source": "Daily laboratory fire danger processing pipeline",
       "contact": "firedata@example.org",
       "description": "Spatial likelihood of wildland fire occurrence or ignition under modeled conditions.",
@@ -119,7 +119,7 @@
       "min": 0.00037821303703822196,
       "max": 0.9790337681770325,
       "version": "v1.0",
-      "productionTime": "2026-06-26T23:32:15.895025Z",
+      "productionTime": "2026-06-26T23:35:01.543226Z",
       "source": "Daily laboratory fire danger processing pipeline",
       "contact": "firedata@example.org",
       "description": "Spatial likelihood of wildland fire occurrence or ignition under modeled conditions.",
