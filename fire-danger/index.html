@@ -124,6 +124,8 @@
       
         <a href="/people/" class="">People</a>
       
+        <a href="/resources/" class="">Resources</a>
+      
         <a href="/about/" class="">About</a>
       
     </nav>
@@ -135,38 +137,84 @@
 
 Under construction. Please check back soon for the interactive wildfire danger index map, featuring daily GeoTIFF layers for Burning Index, Fire Weather Index, Wildland Fire Likelihood, and more. -->
 
-<h1 id="Wildfire-Danger-Index"><a href="#Wildfire-Danger-Index" class="headerlink" title="Wildfire Danger Index"></a>Wildfire Danger Index</h1><p>The portal displays daily laboratory-produced GeoTIFF layers for wildfire danger monitoring. Supported products include Burning Index, Fire Weather Index, Wildland Fire Likelihood, and related operational fire danger metrics.</p>
+<h1 id="Wildfire-Danger-Index"><a href="#Wildfire-Danger-Index" class="headerlink" title="Wildfire Danger Index"></a>Wildfire Danger Index</h1><p>The portal displays daily laboratory-produced GeoTIFF layers for wildfire danger monitoring. Supported products include Burning Index, Fire Weather Index, Wildland Fire Likelihood, and related operational fire danger metrics. Use the dashboard to inspect layer metadata, compare product availability, and download one or more GeoTIFF files.</p>
 <section class="index-dashboard" data-fire-danger-app>
-  <div class="control-panel" aria-label="Fire danger map controls">
-    <label>
-      <span>Index</span>
-      <select id="index-select"></select>
-    </label>
-    <label>
-      <span>Date</span>
-      <select id="date-select"></select>
-    </label>
-    <button id="download-current" class="button" type="button">Download GeoTIFF</button>
-  </div>
-
-  <div class="map-shell">
-    <div id="fire-map" aria-label="Wildfire danger map"></div>
-    <div class="legend" id="fire-legend" aria-live="polite"></div>
-  </div>
-
-  <div class="status-grid">
-    <article>
-      <h2>Selected Layer</h2>
-      <dl id="layer-details">
-        <dt>Status</dt>
-        <dd>Loading available datasets...</dd>
-      </dl>
-    </article>
-    <article>
-      <h2>Data Update Notes</h2>
-      <p>Daily GeoTIFF files are published from <code>source/fire-danger-data/</code>. After adding new files, run <code>npm run data:update</code> and rebuild the site.</p>
-    </article>
-  </div>
+<div class="dashboard-summary" id="dashboard-summary" aria-label="Fire danger data summary">
+<article><span>Products</span><strong>--</strong></article>
+<article><span>Layers</span><strong>--</strong></article>
+<article><span>Latest Date</span><strong>--</strong></article>
+<article><span>CRS</span><strong>--</strong></article>
+</div>
+<div class="fire-dashboard-layout">
+<aside class="fire-dashboard-sidebar" aria-label="Fire danger controls">
+<div class="control-panel" aria-label="Fire danger map controls">
+<label>
+<span>Index</span>
+<select id="index-select"></select>
+</label>
+<label>
+<span>Date</span>
+<select id="date-select"></select>
+</label>
+<label>
+<span>Basemap</span>
+<select id="basemap-select"></select>
+</label>
+<label>
+<span>Color Ramp</span>
+<select id="color-ramp-select"></select>
+</label>
+<label>
+<span>Search files</span>
+<input id="dataset-search" type="search" placeholder="Filter by date, index, or filename">
+</label>
+<div class="control-actions">
+<button id="download-current" class="button primary" type="button">Download Current</button>
+<button id="download-selected" class="button" type="button">Download Selected</button>
+</div>
+</div>
+<section class="download-panel" aria-label="Batch GeoTIFF downloads">
+<div>
+<h2>Batch Downloads</h2>
+<p>Select multiple GeoTIFF layers for one-click sequential download.</p>
+</div>
+<label class="select-all-row">
+<input id="select-all-datasets" type="checkbox">
+<span>Select visible layers</span>
+</label>
+<div id="dataset-checklist" class="dataset-checklist" aria-live="polite"></div>
+</section>
+<div class="sidebar-analytics" aria-label="Fire danger analytics">
+<article class="chart-card">
+<h2>Product Availability</h2>
+<div id="availability-chart" class="bar-chart" aria-live="polite"></div>
+</article>
+<article class="chart-card">
+<h2>Selected Layer Range</h2>
+<div id="range-chart" class="range-chart" aria-live="polite"></div>
+</article>
+</div>
+</aside>
+<div class="fire-dashboard-main">
+<div class="map-shell">
+<div id="fire-map" aria-label="Wildfire danger map"></div>
+<div class="legend" id="fire-legend" aria-live="polite"></div>
+</div>
+<div class="status-grid">
+<article>
+<h2>Selected Layer</h2>
+<dl id="layer-details">
+<dt>Status</dt>
+<dd>Loading available datasets...</dd>
+</dl>
+</article>
+<article>
+<h2>Operational Notes</h2>
+<p>Confirm the product date, units, and processing version before operational interpretation.</p>
+</article>
+</div>
+</div>
+</div>
 </section>
 
 <h2 id="Data-Policy"><a href="#Data-Policy" class="headerlink" title="Data Policy"></a>Data Policy</h2><p>Each raster layer should be accompanied by clear metadata: index name, production date, units, spatial extent, processing version, and contact point. For operational use, always check the timestamp and notes before making decisions.</p>
