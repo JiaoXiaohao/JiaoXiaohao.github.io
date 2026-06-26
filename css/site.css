@@ -18,7 +18,29 @@
   --module-space-y: clamp(28px, 4vw, 44px);
   --module-space-tight: clamp(18px, 3vw, 30px);
   --module-grid-gap: 18px;
-  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-size-body: 1rem;
+  --font-size-small: 0.78rem;
+  --font-size-label: 0.78rem;
+  --font-size-nav: 0.94rem;
+  --font-size-footer: 0.92rem;
+  --font-size-icon: 2rem;
+  --font-size-control: 0.86rem;
+  --font-size-hero-title: clamp(2.45rem, 5vw, 5.4rem);
+  --font-size-hero-text: 1.15rem;
+  --font-size-showcase-title: clamp(1.65rem, 3vw, 3.1rem);
+  --font-size-showcase-text: 0.98rem;
+  --font-size-page-title: clamp(2rem, 4vw, 3.7rem);
+  --font-size-section-title: 1.55rem;
+  --font-size-section-title-large: clamp(1.55rem, 3vw, 2.4rem);
+  --font-size-subsection-title: 1.14rem;
+  --font-size-card-title: 1.22rem;
+  --font-size-profile-title: 1.15rem;
+  --font-size-metadata: 0.95rem;
+  --font-size-lead: clamp(1rem, 1.6vw, 1.16rem);
+  --font-size-metric-value: 1.45rem;
+  --font-size-hero-panel-value: 1.8rem;
+  font-family: var(--font-family);
 }
 
 * {
@@ -29,6 +51,7 @@ body {
   margin: 0;
   background: var(--page-accent), var(--bg);
   color: var(--text);
+  font-size: var(--font-size-body);
   line-height: 1.65;
 }
 
@@ -49,7 +72,7 @@ a:hover {
   padding: 8px clamp(18px, 4vw, 54px);
   background: #12221d;
   color: rgba(255, 255, 255, 0.78);
-  font-size: 0.78rem;
+  font-size: var(--font-size-label);
   font-weight: 700;
   letter-spacing: 0.04em;
   text-transform: uppercase;
@@ -160,7 +183,7 @@ a:hover {
 
 .brand small {
   color: var(--muted);
-  font-size: 0.78rem;
+  font-size: var(--font-size-small);
 }
 
 .site-nav {
@@ -177,7 +200,7 @@ a:hover {
   border: 0;
   border-radius: 6px;
   color: var(--text);
-  font-size: 0.94rem;
+  font-size: var(--font-size-nav);
   font-weight: 700;
 }
 
@@ -242,7 +265,7 @@ main {
 
 .home-showcase-copy h1 {
   margin: 0;
-  font-size: clamp(1.65rem, 3vw, 3.1rem);
+  font-size: var(--font-size-showcase-title);
   line-height: 1.05;
   letter-spacing: 0;
 }
@@ -251,7 +274,7 @@ main {
   max-width: 520px;
   margin: 12px 0 0;
   color: rgba(255, 255, 255, 0.82);
-  font-size: 0.98rem;
+  font-size: var(--font-size-showcase-text);
 }
 
 .home-showcase-stage {
@@ -325,14 +348,14 @@ main {
 }
 
 .home-showcase-slide figcaption strong {
-  font-size: clamp(1.2rem, 2vw, 1.8rem);
+  font-size: var(--font-size-section-title);
   line-height: 1.12;
 }
 
 .home-showcase-slide figcaption span {
   margin-top: 4px;
   color: rgba(255, 255, 255, 0.78);
-  font-size: 0.88rem;
+  font-size: var(--font-size-small);
 }
 
 .home-showcase-arrow {
@@ -347,7 +370,7 @@ main {
   border-radius: 999px;
   background: rgba(0, 0, 0, 0.28);
   color: #fff;
-  font-size: 2rem;
+  font-size: var(--font-size-icon);
   line-height: 1;
   transform: translateY(-50%);
   cursor: pointer;
@@ -375,7 +398,7 @@ main {
 .home-welcome > p {
   margin: 0;
   color: var(--text);
-  font-size: clamp(1rem, 1.6vw, 1.16rem);
+  font-size: var(--font-size-lead);
   font-weight: 800;
   line-height: 1.45;
 }
@@ -397,14 +420,14 @@ main {
 
 .home-welcome blockquote p {
   margin: 0;
-  font-size: 1.05rem;
+  font-size: var(--font-size-body);
 }
 
 .home-welcome cite {
   display: block;
   margin-top: 16px;
   color: var(--muted);
-  font-size: 0.78rem;
+  font-size: var(--font-size-small);
   font-style: normal;
 }
 
@@ -428,7 +451,7 @@ main {
 .hero h1 {
   max-width: 920px;
   margin: 0;
-  font-size: clamp(2.45rem, 5vw, 5.4rem);
+  font-size: var(--font-size-hero-title);
   line-height: 0.98;
   letter-spacing: 0;
 }
@@ -437,7 +460,7 @@ main {
   max-width: 720px;
   margin: 20px 0 0;
   color: rgba(255, 255, 255, 0.88);
-  font-size: 1.15rem;
+  font-size: var(--font-size-hero-text);
 }
 
 .eyebrow {
@@ -446,7 +469,7 @@ main {
   gap: 8px;
   margin: 0 0 16px !important;
   color: #f3cd7a !important;
-  font-size: 0.78rem !important;
+  font-size: var(--font-size-label) !important;
   font-weight: 800;
   letter-spacing: 0.14em;
   text-transform: uppercase;
@@ -506,7 +529,7 @@ main {
 
 .hero-panel span {
   color: #f2c15f;
-  font-size: 0.82rem;
+  font-size: var(--font-size-label);
   font-weight: 800;
   text-transform: uppercase;
 }
@@ -514,7 +537,7 @@ main {
 .hero-panel strong {
   display: block;
   margin-top: 6px;
-  font-size: 1.8rem;
+  font-size: var(--font-size-hero-panel-value);
 }
 
 .metric-strip {
@@ -544,14 +567,14 @@ main {
 
 .metric-strip strong {
   color: var(--green);
-  font-size: 1.45rem;
+  font-size: var(--font-size-metric-value);
   line-height: 1.1;
 }
 
 .metric-strip span {
   margin-top: 4px;
   color: var(--muted);
-  font-size: 0.86rem;
+  font-size: var(--font-size-small);
   font-weight: 800;
   text-transform: uppercase;
 }
@@ -568,21 +591,21 @@ main {
 
 .page-content h1 {
   margin: 0 0 22px;
-  font-size: clamp(2rem, 4vw, 3.7rem);
+  font-size: var(--font-size-page-title);
   line-height: 1.08;
   letter-spacing: 0;
 }
 
 .page-content h2 {
   margin-top: var(--module-space-y);
-  font-size: 1.55rem;
+  font-size: var(--font-size-section-title);
   line-height: 1.25;
 }
 
 .page-content h3 {
   margin-top: var(--module-space-tight);
   color: var(--green);
-  font-size: 1.14rem;
+  font-size: var(--font-size-subsection-title);
 }
 
 .page-content code {
@@ -594,7 +617,7 @@ main {
 .section-kicker {
   margin: 0 0 8px !important;
   color: var(--accent-dark);
-  font-size: 0.78rem !important;
+  font-size: var(--font-size-label) !important;
   font-weight: 900;
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -628,7 +651,7 @@ main {
 
 .home-introduction h2 {
   margin-top: 0;
-  font-size: clamp(1.55rem, 3vw, 2.4rem);
+  font-size: var(--font-size-section-title-large);
 }
 
 .home-introduction > div > p {
@@ -776,7 +799,7 @@ main {
   content: "Open detail";
   align-self: end;
   color: var(--accent-dark);
-  font-size: 0.78rem;
+  font-size: var(--font-size-label);
   font-weight: 900;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -802,7 +825,7 @@ main {
 }
 
 .research-card strong {
-  font-size: 1.22rem;
+  font-size: var(--font-size-card-title);
   line-height: 1.25;
 }
 
@@ -834,7 +857,7 @@ main {
 .research-detail-media figcaption {
   padding: 12px 16px;
   color: var(--muted);
-  font-size: 0.88rem;
+  font-size: var(--font-size-small);
 }
 
 .publication-list {
@@ -861,7 +884,7 @@ main {
 .publication-meta {
   margin: 0;
   color: var(--muted);
-  font-size: 0.95rem;
+  font-size: var(--font-size-metadata);
 }
 
 .publication-links {
@@ -1014,7 +1037,7 @@ main {
 }
 
 .person-card strong {
-  font-size: 1.15rem;
+  font-size: var(--font-size-profile-title);
 }
 
 .person-card em {
@@ -1037,7 +1060,7 @@ main {
 .profile-meta {
   margin: 0;
   color: var(--accent-dark);
-  font-size: 1.08rem;
+  font-size: var(--font-size-metadata);
   font-weight: 800;
 }
 
@@ -1072,7 +1095,7 @@ main {
   border-radius: 8px;
   background: linear-gradient(135deg, var(--green), #173d32);
   color: #fff;
-  font-size: 1.4rem;
+  font-size: var(--font-size-card-title);
   font-weight: 900;
   box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.18);
 }
@@ -1089,7 +1112,7 @@ main {
 .profile-kicker {
   margin: 0 0 8px !important;
   color: var(--accent-dark);
-  font-size: 0.78rem !important;
+  font-size: var(--font-size-label) !important;
   font-weight: 900;
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -1110,7 +1133,7 @@ main {
   border-radius: 999px;
   background: rgba(255, 255, 255, 0.72);
   color: var(--green);
-  font-size: 0.78rem;
+  font-size: var(--font-size-label);
   font-weight: 800;
 }
 
@@ -1149,7 +1172,7 @@ main {
   border-radius: 5px;
   background: #e8eee6;
   color: var(--green);
-  font-size: 0.68rem;
+  font-size: var(--font-size-small);
   font-weight: 900;
   overflow: hidden;
 }
@@ -1272,7 +1295,7 @@ main {
   align-items: center;
   gap: 7px;
   color: var(--muted);
-  font-size: 0.78rem;
+  font-size: var(--font-size-label);
   font-weight: 900;
   text-transform: uppercase;
 }
@@ -1312,7 +1335,7 @@ main {
 
 .status-grid h2 {
   margin-top: 0;
-  font-size: 1.15rem;
+  font-size: var(--font-size-profile-title);
 }
 
 .index-dashboard {
@@ -1337,7 +1360,7 @@ main {
   display: grid;
   gap: 6px;
   color: var(--muted);
-  font-size: 0.86rem;
+  font-size: var(--font-size-control);
   font-weight: 800;
   text-transform: uppercase;
 }
@@ -1385,7 +1408,7 @@ main {
   border-radius: 6px;
   background: rgba(255, 255, 255, 0.95);
   box-shadow: 0 10px 30px rgba(28, 37, 32, 0.14);
-  font-size: 0.86rem;
+  font-size: var(--font-size-control);
 }
 
 .legend-bar {
@@ -1433,7 +1456,7 @@ main {
   border-top: 1px solid var(--line);
   background: #eef2eb;
   color: var(--muted);
-  font-size: 0.92rem;
+  font-size: var(--font-size-footer);
 }
 
 .site-footer p {
