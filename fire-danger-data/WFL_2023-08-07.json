@@ -11,7 +11,7 @@
   "min": 0.00212695705704391,
   "max": 0.9820414781570435,
   "version": "v1.0",
-  "productionTime": "2026-06-26T23:19:48.103958Z",
+  "productionTime": "2026-06-26T23:32:16.187961Z",
   "source": "Daily laboratory fire danger processing pipeline",
   "contact": "firedata@example.org",
   "description": "Spatial likelihood of wildland fire occurrence or ignition under modeled conditions.",
