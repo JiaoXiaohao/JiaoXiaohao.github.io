@@ -488,13 +488,59 @@
     link.remove();
   }
 
-  function downloadSelectedDatasets() {
+  function downloadBlob(blob, filename) {
+    const objectUrl = URL.createObjectURL(blob);
+    const link = document.createElement('a');
+    link.href = objectUrl;
+    link.download = filename;
+    document.body.appendChild(link);
+    link.click();
+    link.remove();
+    window.setTimeout(() => URL.revokeObjectURL(objectUrl), 1000);
+  }
+
+  async function fetchDatasetFile(dataset) {
+    const fileUrl = datasetFileUrl(dataset);
+    if (!fileUrl) throw new Error(`Missing file URL for ${dataset.id || dataset.filename || 'dataset'}`);
+    const response = await fetch(fileUrl);
+    if (!response.ok) throw new Error(`HTTP ${response.status} for ${dataset.filename || fileUrl}`);
+    return {
+      name: dataset.filename || fileUrl.split('/').pop() || `${dataset.id}.tif`,
+      data: await response.arrayBuffer()
+    };
+  }
+
+  async function downloadSelectedDatasets() {
     const selectedIds = Array.from(datasetChecklist.querySelectorAll('input[type="checkbox"]:checked'))
       .map((input) => input.value);
     const datasets = manifest.datasets.filter((dataset) => selectedIds.includes(dataset.id));
-    datasets.forEach((dataset, index) => {
-      window.setTimeout(() => downloadDataset(dataset), index * 250);
-    });
+    if (!datasets.length) return;
+
+    if (!window.FireDangerZip?.createZip) {
+      setDetails([
+        ['Status', 'Selected files could not be packaged.'],
+        ['Reason', 'ZIP support did not load. Refresh the page and try again.']
+      ]);
+      return;
+    }
+
+    const originalLabel = downloadSelectedButton.textContent;
+    downloadSelectedButton.disabled = true;
+    downloadSelectedButton.textContent = 'Preparing ZIP...';
+
+    try {
+      const files = await Promise.all(datasets.map(fetchDatasetFile));
+      const archive = await window.FireDangerZip.createZip(files);
+      downloadBlob(archive, 'fire-danger-datasets.zip');
+    } catch (error) {
+      setDetails([
+        ['Status', 'Selected files could not be packaged.'],
+        ['Reason', error.message]
+      ]);
+    } finally {
+      downloadSelectedButton.disabled = false;
+      downloadSelectedButton.textContent = originalLabel;
+    }
   }
 
   async function initialize() {
