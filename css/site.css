@@ -916,10 +916,50 @@ main {
   color: var(--text);
 }
 
+.publication-authors {
+  margin: 0;
+  color: var(--text);
+}
+
 .publication-meta {
   margin: 0;
   color: var(--muted);
   font-size: var(--font-size-metadata);
+}
+
+.publication-rank {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.publication-rank span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 30px;
+  padding: 4px 9px;
+  border: 0;
+  border-radius: 999px;
+  background: #ff9b9b;
+  color: #5b0d0d;
+  font-size: var(--font-size-label);
+  font-weight: 800;
+}
+
+.publication-rank .publication-tag--impact {
+  background: #8ce1d7;
+  color: #073d38;
+}
+
+.publication-doi {
+  margin: 0;
+  color: var(--muted);
+  font-size: var(--font-size-metadata);
+}
+
+.publication-doi a {
+  font-weight: 800;
+  overflow-wrap: anywhere;
 }
 
 .publication-links {
