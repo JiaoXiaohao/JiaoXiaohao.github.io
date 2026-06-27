@@ -946,6 +946,26 @@ main {
   font-weight: 800;
 }
 
+.publication-rank .publication-tag--zone-1 {
+  background: #d84032;
+  color: #fff;
+}
+
+.publication-rank .publication-tag--zone-2 {
+  background: #f47d5f;
+  color: #5b140e;
+}
+
+.publication-rank .publication-tag--zone-3 {
+  background: #f7b38f;
+  color: #5d2614;
+}
+
+.publication-rank .publication-tag--zone-4 {
+  background: #f9d7cb;
+  color: #6f3324;
+}
+
 .publication-rank .publication-tag--impact {
   background: #8ce1d7;
   color: #073d38;
