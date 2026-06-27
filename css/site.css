@@ -1054,7 +1054,7 @@ main {
   gap: var(--module-grid-gap);
   margin: var(--module-space-tight) 0 var(--module-space-y);
   align-items: stretch;
-  justify-content: start;
+  justify-content: center;
 }
 
 .person-card {
