@@ -1095,7 +1095,7 @@ main {
 }
 
 .person-card:hover {
-  border-color: rgba(190, 75, 47, 0.55);
+  border-color: rgba(252, 0, 0, 0.75);
   box-shadow: 0 14px 34px rgba(42, 55, 48, 0.1);
   text-decoration: none;
   transform: translateY(-2px);
