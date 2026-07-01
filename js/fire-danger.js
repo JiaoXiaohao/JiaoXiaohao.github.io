@@ -6,6 +6,9 @@
   const dateSelect = document.getElementById('date-select');
   const basemapSelect = document.getElementById('basemap-select');
   const colorRampSelect = document.getElementById('color-ramp-select');
+  const indexLayerVisible = document.getElementById('index-layer-visible');
+  const indexOpacity = document.getElementById('index-opacity');
+  const indexOpacityValue = document.getElementById('index-opacity-value');
   const details = document.getElementById('layer-details');
   const legend = document.getElementById('fire-legend');
   const downloadButton = document.getElementById('download-current');
@@ -115,6 +118,7 @@
   let map;
   let baseLayer;
   let rasterLayer;
+  let rasterLayerOnMap = false;
   let manifest;
   let manifestUrl;
   let activeDataset;
@@ -165,6 +169,33 @@
     return map;
   }
 
+  function clamp(value, min, max) {
+    return Math.max(min, Math.min(max, value));
+  }
+
+  function selectedIndexOpacityPercent() {
+    const value = Number(indexOpacity?.value ?? 72);
+    return clamp(Number.isFinite(value) ? value : 72, 0, 100);
+  }
+
+  function selectedIndexOpacity() {
+    return selectedIndexOpacityPercent() / 100;
+  }
+
+  function updateIndexOpacityValue() {
+    if (!indexOpacityValue) return;
+    indexOpacityValue.textContent = `${Math.round(selectedIndexOpacityPercent())}%`;
+  }
+
+  function isIndexLayerVisible() {
+    return !indexLayerVisible || indexLayerVisible.checked;
+  }
+
+  function setLayerControlsDisabled(disabled) {
+    if (indexLayerVisible) indexLayerVisible.disabled = disabled;
+    if (indexOpacity) indexOpacity.disabled = disabled;
+  }
+
   function populateBasemapOptions() {
     basemapSelect.innerHTML = basemaps.map((basemap) => (
       `<option value="${escapeHtml(basemap.id)}">${escapeHtml(basemap.label)}</option>`
@@ -206,7 +237,7 @@
     }
     baseLayer = L.tileLayer(selected.url, selected.options);
     baseLayer.addTo(map);
-    if (rasterLayer) {
+    if (rasterLayer && rasterLayerOnMap) {
       rasterLayer.bringToFront();
     }
   }
@@ -382,15 +413,56 @@
     });
   }
 
-  function renderRasterLayer(georaster, dataset, min, max, noDataValue, { fitBounds = true } = {}) {
+  function addCurrentRasterLayer({ fitBounds = false } = {}) {
+    if (!rasterLayer || rasterLayerOnMap) return;
     const mapInstance = ensureMap();
+    rasterLayer.addTo(mapInstance);
+    rasterLayerOnMap = true;
+    rasterLayer.bringToFront();
+    if (fitBounds) {
+      mapInstance.fitBounds(rasterLayer.getBounds(), { padding: [18, 18] });
+    }
+  }
+
+  function removeCurrentRasterLayer() {
+    if (!rasterLayer || !rasterLayerOnMap || !map) return;
+    map.removeLayer(rasterLayer);
+    rasterLayerOnMap = false;
+  }
+
+  function clearRasterLayer() {
+    if (pendingRasterFrame) {
+      window.cancelAnimationFrame(pendingRasterFrame);
+      pendingRasterFrame = null;
+    }
+    removeCurrentRasterLayer();
+    rasterLayer = null;
+  }
+
+  function setIndexLayerVisibility(visible) {
+    if (!rasterLayer) return;
+    if (visible) {
+      addCurrentRasterLayer();
+    } else {
+      removeCurrentRasterLayer();
+    }
+  }
+
+  function setIndexLayerOpacity() {
+    updateIndexOpacityValue();
+    if (rasterLayer?.setOpacity) {
+      rasterLayer.setOpacity(selectedIndexOpacity());
+    }
+  }
+
+  function renderRasterLayer(georaster, dataset, min, max, noDataValue, { fitBounds = true } = {}) {
     if (rasterLayer) {
-      mapInstance.removeLayer(rasterLayer);
+      removeCurrentRasterLayer();
     }
 
     rasterLayer = new GeoRasterLayer({
       georaster,
-      opacity: 0.72,
+      opacity: selectedIndexOpacity(),
       resolution: 192,
       pixelValuesToColorFn: (values) => {
         const value = values[0];
@@ -398,16 +470,17 @@
         return valueToColor(value, min, max);
       }
     });
-    rasterLayer.addTo(mapInstance);
-    rasterLayer.bringToFront();
-    if (fitBounds) {
-      mapInstance.fitBounds(rasterLayer.getBounds(), { padding: [18, 18] });
+    rasterLayerOnMap = false;
+    if (isIndexLayerVisible()) {
+      addCurrentRasterLayer({ fitBounds });
     }
   }
 
   async function loadDataset(dataset) {
+    setLayerControlsDisabled(!dataset);
     if (!dataset) {
       activeDataset = null;
+      clearRasterLayer();
       setDetails([
         ['Status', 'No GeoTIFF datasets are listed in manifest.json.'],
         ['Next step', 'Add daily .tif files to source/fire-danger-data and run npm run data:update.']
@@ -464,6 +537,7 @@
         ['File', dataset.filename]
       ]);
     } catch (error) {
+      clearRasterLayer();
       setDetails([
         ['Status', 'The selected GeoTIFF could not be displayed.'],
         ['Reason', error.message],
@@ -545,6 +619,7 @@
 
   async function initialize() {
     ensureMap();
+    updateIndexOpacityValue();
     setDetails([['Status', 'Loading manifest...']]);
 
     try {
@@ -591,6 +666,16 @@
   colorRampSelect.addEventListener('change', () => {
     setColorRamp(colorRampSelect.value);
   });
+
+  if (indexLayerVisible) {
+    indexLayerVisible.addEventListener('change', () => {
+      setIndexLayerVisibility(indexLayerVisible.checked);
+    });
+  }
+
+  if (indexOpacity) {
+    indexOpacity.addEventListener('input', setIndexLayerOpacity);
+  }
 
   datasetSearch.addEventListener('input', async () => {
     const firstDataset = populateDates();

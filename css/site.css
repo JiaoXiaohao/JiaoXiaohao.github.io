@@ -1524,6 +1524,63 @@ main {
   font: inherit;
 }
 
+.layer-display-controls {
+  display: grid;
+  gap: 12px;
+  margin: 0;
+  padding: 12px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #f8faf5;
+}
+
+.layer-display-controls legend {
+  padding: 0 4px;
+  color: var(--muted);
+  font-size: var(--font-size-label);
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.layer-toggle,
+.opacity-control {
+  display: grid;
+  gap: 8px;
+  color: var(--muted);
+  font-size: var(--font-size-control);
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.layer-toggle {
+  grid-template-columns: auto minmax(0, 1fr);
+  align-items: center;
+}
+
+.layer-toggle input {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--accent);
+}
+
+.opacity-control>span {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.opacity-control output {
+  color: var(--green);
+  font-weight: 900;
+}
+
+.opacity-control input[type="range"] {
+  width: 100%;
+  accent-color: var(--accent);
+}
+
 .control-panel select {
   width: 100%;
   min-height: 42px;
@@ -1537,6 +1594,8 @@ main {
 
 .control-panel select:focus,
 .control-panel input[type="search"]:focus,
+.layer-toggle input:focus,
+.opacity-control input[type="range"]:focus,
 .button:focus {
   outline: 3px solid rgba(47, 102, 140, 0.22);
   outline-offset: 2px;

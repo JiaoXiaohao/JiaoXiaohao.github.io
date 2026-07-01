@@ -165,6 +165,17 @@ Under construction. Please check back soon for the interactive wildfire danger i
 <span>Color Ramp</span>
 <select id="color-ramp-select"></select>
 </label>
+<fieldset class="layer-display-controls" aria-label="Map layer display controls">
+<legend>Map Layers</legend>
+<label class="layer-toggle">
+<input id="index-layer-visible" type="checkbox" checked>
+<span>Show selected INDEX layer</span>
+</label>
+<label class="opacity-control">
+<span>Selected INDEX opacity <output id="index-opacity-value" for="index-opacity">72%</output></span>
+<input id="index-opacity" type="range" min="0" max="100" step="5" value="72">
+</label>
+</fieldset>
 <label>
 <span>Search files</span>
 <input id="dataset-search" type="search" placeholder="Filter by date, index, or filename">
