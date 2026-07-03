@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" role="img" aria-labelledby="title desc">
-  <title id="title">Fire danger index map placeholder</title>
-  <desc id="desc">A stylized raster map graphic for fire danger index research.</desc>
+  <title id="title">Wildfire research map graphic</title>
+  <desc id="desc">A stylized landscape map graphic for wildfire impacts and fire danger research.</desc>
   <rect width="960" height="540" fill="#f7f8f3"/>
   <rect x="52" y="54" width="856" height="432" rx="28" fill="#ffffff" stroke="#d9ded5"/>
   <path d="M128 390c98-68 170-78 260-42 79 31 138 23 219-46 74-63 139-75 229-47v127H128Z" fill="#dce7df"/>

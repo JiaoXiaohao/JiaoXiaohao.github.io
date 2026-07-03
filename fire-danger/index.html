@@ -4,8 +4,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Wildfire Danger Index | Wildfire Risk and Earth System Laboratory</title>
-  <meta name="description" content="Interactive daily wildfire danger index map, including Burning Index, Fire Weather Index, and Wildland Fire Likelihood GeoTIFF products.">
+  <title>Wildfire Danger Index | Ecosystem and Land Disturbance Research Group</title>
+  <meta name="description" content="Jump page for the standalone Wildfire Danger Index dashboard.">
   <meta name="generator" content="Hexo">
   <link rel="preconnect" href="https://unpkg.com">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
@@ -69,48 +69,57 @@
     }
   </style>
   
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
-  
 </head>
 <body>
   
     <aside class="affiliation-bar" aria-label="Institutional affiliations">
-      <span>Affiliated Laboratory</span>
-      <div class="affiliation-logos">
+      
+        <section class="affiliation-group affiliation-group--founded" aria-label="Founded by">
+          <span>Founded by</span>
+          <div class="affiliation-logos">
+            
+              <a target="_blank" rel="noopener" href="https://www.nsf.gov/" class="affiliation-logo" aria-label="NSF">
+                <img src="https://nsf.widen.net/content/doszia9tmc/png/NSF_NSB_LogoLockup_RGB.png?color=ffffffff&u=94jibf&position=c&quality=80" alt="NSF">
+              </a>
+            
+              <a target="_blank" rel="noopener" href="https://www.nasa.gov/" class="affiliation-logo" aria-label="NASA">
+                <img src="https://gpm.nasa.gov/sites/default/files/NASA-Logo-Large.jpg" alt="NASA">
+              </a>
+            
+              <a target="_blank" rel="noopener" href="https://www.usda.gov/" class="affiliation-logo" aria-label="USDA">
+                <img src="https://www.usda.gov/sites/default/files/usda-symbol.svg" alt="USDA">
+              </a>
+            
+              <a target="_blank" rel="noopener" href="https://www.usgs.gov/" class="affiliation-logo" aria-label="USGS">
+                <img src="https://d9-wret.s3.us-west-2.amazonaws.com/assets/palladium/production/s3fs-public/styles/full_width/public/thumbnails/image/USGS_logo_green.png?itok=k0Aj8udv" alt="USGS">
+              </a>
+            
+          </div>
+        </section>
         
-          <a target="_blank" rel="noopener" href="https://go.okstate.edu/" class="affiliation-logo" aria-label="Oklahoma State University">
-            <img src="https://brand.okstate.edu/site-files/images/brand-guide/primary-brand.png" alt="Oklahoma State University">
-          </a>
+        <section class="affiliation-group affiliation-group--affiliated" aria-label="Affiliated with">
+          <span>Affiliated with</span>
+          <div class="affiliation-logos">
+            
+              <a target="_blank" rel="noopener" href="https://go.okstate.edu/" class="affiliation-logo" aria-label="Oklahoma State University">
+                <img src="https://brand.okstate.edu/site-files/images/brand-guide/primary-brand.png" alt="Oklahoma State University">
+              </a>
+            
+          </div>
+        </section>
         
-          <a target="_blank" rel="noopener" href="https://www.nsf.gov/" class="affiliation-logo" aria-label="NSF">
-            <img src="https://nsf.widen.net/content/doszia9tmc/png/NSF_NSB_LogoLockup_RGB.png?color=ffffffff&u=94jibf&position=c&quality=80" alt="NSF">
-          </a>
-        
-          <a target="_blank" rel="noopener" href="https://www.nasa.gov/" class="affiliation-logo" aria-label="NASA">
-            <img src="https://gpm.nasa.gov/sites/default/files/NASA-Logo-Large.jpg" alt="NASA">
-          </a>
-        
-          <a target="_blank" rel="noopener" href="https://www.usda.gov/" class="affiliation-logo" aria-label="USDA">
-            <img src="https://www.usda.gov/sites/default/files/usda-symbol.svg" alt="USDA">
-          </a>
-        
-          <a target="_blank" rel="noopener" href="https://www.usgs.gov/" class="affiliation-logo" aria-label="USGS">
-            <img src="https://d9-wret.s3.us-west-2.amazonaws.com/assets/palladium/production/s3fs-public/styles/full_width/public/thumbnails/image/USGS_logo_green.png?itok=k0Aj8udv" alt="USGS">
-          </a>
-        
-      </div>
     </aside>
   
   <header class="site-header">
-    <a class="brand" href="/" aria-label="Wildfire Risk and Earth System Laboratory home">
+    <a class="brand" href="/" aria-label="Ecosystem and Land Disturbance Research Group home">
       <span class="brand-mark brand-mark--image" style="--brand-mark-width: 46px; --brand-mark-height: 46px">
         
-          <img src="/images/lab-mark.svg" alt="Wildfire Risk Lab logo">
+          <img src="/images/lab-mark.svg" alt="Ecosystem and Land Disturbance Research Group logo">
         
       </span>
       <span>
-        <strong>Wildfire Risk and Earth System Laboratory</strong>
-        <small>Ecosystem modeling, wildfire, climate, and remote sensing</small>
+        <strong>Ecosystem and Land Disturbance Research Group</strong>
+        <small>Fire ecology, wildfire risk, ecosystem modeling, and remote sensing</small>
       </span>
     </a>
     <nav class="site-nav" aria-label="Main navigation">
@@ -134,111 +143,16 @@
 
   <main>
     <article class="page-content">
-  <!-- # Wildfire Danger Index
-
-Under construction. Please check back soon for the interactive wildfire danger index map, featuring daily GeoTIFF layers for Burning Index, Fire Weather Index, Wildland Fire Likelihood, and more. -->
-
-<h1 id="Wildfire-Danger-Index"><a href="#Wildfire-Danger-Index" class="headerlink" title="Wildfire Danger Index"></a>Wildfire Danger Index</h1><p>The portal displays daily laboratory-produced GeoTIFF layers for wildfire danger monitoring. Supported products include Burning Index, Fire Weather Index, Wildland Fire Likelihood, and related operational fire danger metrics. Use the dashboard to inspect layer metadata, compare product availability, and download one or more GeoTIFF files.</p>
-<section class="index-dashboard" data-fire-danger-app>
-<div class="dashboard-summary" id="dashboard-summary" aria-label="Fire danger data summary">
-<article><span>Products</span><strong>--</strong></article>
-<article><span>Layers</span><strong>--</strong></article>
-<article><span>Latest Date</span><strong>--</strong></article>
-<article><span>CRS</span><strong>--</strong></article>
-</div>
-<div class="fire-dashboard-layout">
-<aside class="fire-dashboard-sidebar" aria-label="Fire danger controls">
-<div class="control-panel" aria-label="Fire danger map controls">
-<label>
-<span>Index</span>
-<select id="index-select"></select>
-</label>
-<label>
-<span>Date</span>
-<select id="date-select"></select>
-</label>
-<label>
-<span>Basemap</span>
-<select id="basemap-select"></select>
-</label>
-<label>
-<span>Color Ramp</span>
-<select id="color-ramp-select"></select>
-</label>
-<fieldset class="layer-display-controls" aria-label="Map layer display controls">
-<legend>Map Layers</legend>
-<label class="layer-toggle">
-<input id="index-layer-visible" type="checkbox" checked>
-<span>Show selected INDEX layer</span>
-</label>
-<label class="opacity-control">
-<span>Selected INDEX opacity <output id="index-opacity-value" for="index-opacity">72%</output></span>
-<input id="index-opacity" type="range" min="0" max="100" step="5" value="72">
-</label>
-</fieldset>
-<label>
-<span>Search files</span>
-<input id="dataset-search" type="search" placeholder="Filter by date, index, or filename">
-</label>
-<div class="control-actions">
-<button id="download-current" class="button primary" type="button">Download Current</button>
-<button id="download-selected" class="button" type="button">Download Selected</button>
-</div>
-</div>
-<section class="download-panel" aria-label="Batch GeoTIFF downloads">
-<div>
-<h2>Batch Downloads</h2>
-<p>Select multiple GeoTIFF layers for one zip download.</p>
-</div>
-<label class="select-all-row">
-<input id="select-all-datasets" type="checkbox">
-<span>Select visible layers</span>
-</label>
-<div id="dataset-checklist" class="dataset-checklist" aria-live="polite"></div>
+  <h1 id="Wildfire-Danger-Index"><a href="#Wildfire-Danger-Index" class="headerlink" title="Wildfire Danger Index"></a>Wildfire Danger Index</h1><p>The Wildfire Danger Index dashboard is maintained as an independent project. This page is reserved in the original laboratory website so visitors can jump to the target dashboard when it is published or served locally.</p>
+<section class="project-jump">
+  <div>
+    <p class="section-kicker">Standalone Dashboard</p>
+    <h2>Open Wildfire Danger Index</h2>
+    <p>The target project contains the full Leaflet map, GeoTIFF display, batch downloads, raster inspection, and GIS-style analysis tools.</p>
+    <p><strong>Current local target:</strong> <code>http://localhost:8000</code></p>
+  </div>
+  <a class="button primary" target="_blank" rel="noopener" href="https://www.github.com">Open Target Dashboard</a>
 </section>
-<div class="sidebar-analytics" aria-label="Fire danger analytics">
-<article class="chart-card">
-<h2>Product Availability</h2>
-<div id="availability-chart" class="bar-chart" aria-live="polite"></div>
-</article>
-<article class="chart-card">
-<h2>Selected Layer Range</h2>
-<div id="range-chart" class="range-chart" aria-live="polite"></div>
-</article>
-</div>
-</aside>
-<div class="fire-dashboard-main">
-<div class="map-shell">
-<div id="fire-map" aria-label="Wildfire danger map"></div>
-<div class="legend" id="fire-legend" aria-live="polite"></div>
-</div>
-<div class="status-grid">
-<article>
-<h2>Selected Layer</h2>
-<dl id="layer-details">
-<dt>Status</dt>
-<dd>Loading available datasets...</dd>
-</dl>
-</article>
-<article>
-<h2>Operational Notes</h2>
-<p>Confirm the product date, units, and processing version before operational interpretation.</p>
-</article>
-</div>
-</div>
-</div>
-</section>
-
-<h2 id="Data-Policy"><a href="#Data-Policy" class="headerlink" title="Data Policy"></a>Data Policy</h2><p>Each raster layer should be accompanied by clear metadata: index name, production date, units, spatial extent, processing version, and contact point. For operational use, always check the timestamp and notes before making decisions.</p>
-<h2 id="Supported-Products"><a href="#Supported-Products" class="headerlink" title="Supported Products"></a>Supported Products</h2><ul>
-<li><strong>BI:</strong> Burning Index.</li>
-<li><strong>FWI:</strong> Fire Weather Index.</li>
-<li><strong>WFL:</strong> Wildland Fire Likelihood.</li>
-<li><strong>ERC:</strong> Energy Release Component.</li>
-<li><strong>SC:</strong> Spread Component.</li>
-<li><strong>IC:</strong> Ignition Component.</li>
-</ul>
-<!-- Additional products can be added by placing GeoTIFF files in the data directory and including the desired `indexId` in either the file name or sidecar metadata. Recommended filenames include `BI_YYYY-MM-DD.tif`, `FWI_YYYY-MM-DD.tif`, and `WFL_YYYY-MM-DD.tif`. -->
 
 </article>
 
@@ -246,47 +160,49 @@ Under construction. Please check back soon for the interactive wildfire danger i
 
   <footer class="site-footer">
     <div>
-      <p>&copy; 2026 Wildfire Risk and Earth System Laboratory. Built with Hexo for reproducible research communication.</p>
+      <p>&copy; 2026 Ecosystem and Land Disturbance Research Group. Built with Hexo for reproducible research communication.</p>
     </div>
     
       <div class="footer-logos" aria-label="Institutional affiliations">
         
-          <a target="_blank" rel="noopener" href="https://go.okstate.edu/" aria-label="Oklahoma State University">
-            <img src="https://brand.okstate.edu/site-files/images/brand-guide/primary-brand.png" alt="Oklahoma State University">
-          </a>
+          <section class="footer-logo-group" aria-label="Founded by">
+            <span>Founded by</span>
+            <div>
+              
+                <a target="_blank" rel="noopener" href="https://www.nsf.gov/" aria-label="NSF">
+                  <img src="https://nsf.widen.net/content/doszia9tmc/png/NSF_NSB_LogoLockup_RGB.png?color=ffffffff&u=94jibf&position=c&quality=80" alt="NSF">
+                </a>
+              
+                <a target="_blank" rel="noopener" href="https://www.nasa.gov/" aria-label="NASA">
+                  <img src="https://gpm.nasa.gov/sites/default/files/NASA-Logo-Large.jpg" alt="NASA">
+                </a>
+              
+                <a target="_blank" rel="noopener" href="https://www.usda.gov/" aria-label="USDA">
+                  <img src="https://www.usda.gov/sites/default/files/usda-symbol.svg" alt="USDA">
+                </a>
+              
+                <a target="_blank" rel="noopener" href="https://www.usgs.gov/" aria-label="USGS">
+                  <img src="https://d9-wret.s3.us-west-2.amazonaws.com/assets/palladium/production/s3fs-public/styles/full_width/public/thumbnails/image/USGS_logo_green.png?itok=k0Aj8udv" alt="USGS">
+                </a>
+              
+            </div>
+          </section>
         
-          <a target="_blank" rel="noopener" href="https://www.nsf.gov/" aria-label="NSF">
-            <img src="https://nsf.widen.net/content/doszia9tmc/png/NSF_NSB_LogoLockup_RGB.png?color=ffffffff&u=94jibf&position=c&quality=80" alt="NSF">
-          </a>
-        
-          <a target="_blank" rel="noopener" href="https://www.nasa.gov/" aria-label="NASA">
-            <img src="https://gpm.nasa.gov/sites/default/files/NASA-Logo-Large.jpg" alt="NASA">
-          </a>
-        
-          <a target="_blank" rel="noopener" href="https://www.usda.gov/" aria-label="USDA">
-            <img src="https://www.usda.gov/sites/default/files/usda-symbol.svg" alt="USDA">
-          </a>
-        
-          <a target="_blank" rel="noopener" href="https://www.usgs.gov/" aria-label="USGS">
-            <img src="https://d9-wret.s3.us-west-2.amazonaws.com/assets/palladium/production/s3fs-public/styles/full_width/public/thumbnails/image/USGS_logo_green.png?itok=k0Aj8udv" alt="USGS">
-          </a>
+          <section class="footer-logo-group" aria-label="Affiliated with">
+            <span>Affiliated with</span>
+            <div>
+              
+                <a target="_blank" rel="noopener" href="https://go.okstate.edu/" aria-label="Oklahoma State University">
+                  <img src="https://brand.okstate.edu/site-files/images/brand-guide/primary-brand.png" alt="Oklahoma State University">
+                </a>
+              
+            </div>
+          </section>
         
       </div>
     
   </footer>
 
-  
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-  
-    <script src="https://unpkg.com/georaster@1.6.0/dist/georaster.browser.bundle.min.js"></script>
-  
-    <script src="https://unpkg.com/georaster-layer-for-leaflet@3.10.0/dist/georaster-layer-for-leaflet.min.js"></script>
-  
-    <script src="/js/fire-danger-display.js"></script>
-  
-    <script src="/js/fire-danger-zip.js"></script>
-  
-    <script src="/js/fire-danger.js"></script>
   
 </body>
 </html>
